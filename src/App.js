@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import { userContext } from './components/store/userContext';
+import User from './components/User';
+import axios from 'axios';
+import Second from './components/store/USer';
+import { postContext } from './components/store/posts'
 
-function App() {
+const App = () => {
+
+  const [users, setUsers] = useState([]);
+  const [post, setPost] = useState([]);
+
+  useEffect(() => {
+    async function getUsers() {
+      const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+      setUsers(response.data)
+      console.log(response);
+    }
+    getUsers();
+
+  }, [])
+
+  useEffect(() => {
+    async function getPost() {
+      const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      setPost(response.data)
+      console.log(response);
+    }
+
+    getPost();
+  }, [])
+
+  console.log(post, "3333");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <userContext.Provider value={users}>
+      <postContext.Provider value={post}>
+        <User />
+        <Second />
+      </postContext.Provider>
+    </userContext.Provider>
   );
-}
+};
+
 
 export default App;
