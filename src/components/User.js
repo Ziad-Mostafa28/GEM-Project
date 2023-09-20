@@ -4,11 +4,14 @@ import { userContext } from './store/userContext'
 
 const User = () => {
     const newvalue = useContext(userContext);
+    const banners = newvalue?.banners //for all banners
+    const collections = newvalue?.collections //for all collections
+    
     return (
         <>
-            {newvalue.length > 0 ? newvalue.map((val) =>
+            {banners?.length > 0 ? banners.map((banner) =>
                 <div>
-                    <h1>{val.banners.title}</h1>
+                    <h1>{banner.title}</h1>
                 </div>
             ) : ''}
         </>

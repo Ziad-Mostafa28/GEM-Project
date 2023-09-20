@@ -12,7 +12,7 @@ const App = () => {
     async function getUsers() {
       const response = await axios.get('https://uat-iconcreations.com/2022/gem/public/api/web/home');
       setUsers(response.data.data)
-      console.log(response);
+      console.log(response.data.data);
     }
     getUsers();
 
