@@ -7,9 +7,9 @@ const User = () => {
     return (
         <>
             {newvalue.length > 0 ? newvalue.map((val) =>
-                <>
-                    <h1>{val.name}</h1>
-                </>
+                <div>
+                    <h1>{val.banners.title}</h1>
+                </div>
             ) : ''}
         </>
     )
