@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { userContext } from './components/store/userContext';
-import User from './components/User';
+// import User from './components/store/User';
+// import Slider from './components/Banner/Slider';
 import axios from 'axios';
+import { SliderContext } from './components/Banner/SliderContext';
+import 'bootstrap'
+import Users from './components/store/Users';
+
 
 const App = () => {
 
@@ -21,7 +26,11 @@ const App = () => {
 
   return (
     <userContext.Provider value={users}>
-      <User />
+
+      <SliderContext.Provider>
+        <Users/>
+      </SliderContext.Provider>
+
     </userContext.Provider>
   );
 };
