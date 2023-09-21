@@ -1,39 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
-import { userContext } from './components/store/userContext';
-// import User from './components/store/User';
-// import Slider from './components/Banner/Slider';
-import axios from 'axios';
-import { SliderContext } from './components/Banner/SliderContext';
-import 'bootstrap'
-import Users from './components/store/Users';
-
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import { homeContext } from "./store/homeContext";
+import axios from "axios";
+// import "bootstrap";
+import Home from "./pages/Home/Home";
 
 const App = () => {
-
-  const [users, setUsers] = useState([]);
+  const [homeData, setHomeData] = useState([]);
 
   useEffect(() => {
-    async function getUsers() {
-      const response = await axios.get('https://uat-iconcreations.com/2022/gem/public/api/web/home');
-      setUsers(response.data.data)
+    async function getHomeData() {
+      const response = await axios.get(
+        "https://uat-iconcreations.com/2022/gem/public/api/web/home"
+      );
+      setHomeData(response.data.data);
       console.log(response.data.data);
     }
-    getUsers();
-
-  }, [])
-
+    getHomeData();
+  }, []);
 
   return (
-    <userContext.Provider value={users}>
-
-      <SliderContext.Provider>
-        <Users/>
-      </SliderContext.Provider>
-
-    </userContext.Provider>
+    <homeContext.Provider value={homeData}>
+      <Home />
+    </homeContext.Provider>
   );
 };
-
 
 export default App;
