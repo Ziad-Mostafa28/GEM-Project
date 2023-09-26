@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { homeContext } from "./store/homeContext";
 import axios from "axios";
-// import "bootstrap";
 import Home from "./pages/Home/Home";
+import Header from "./components/Layout/Header/Header";
 
 const App = () => {
   const [homeData, setHomeData] = useState([]);
@@ -20,9 +20,12 @@ const App = () => {
   }, []);
 
   return (
-    <homeContext.Provider value={homeData}>
-      <Home />
-    </homeContext.Provider>
+    <>
+      <Header />
+      <homeContext.Provider value={homeData}>
+        <Home />
+      </homeContext.Provider>
+    </>
   );
 };
 
