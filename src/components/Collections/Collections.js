@@ -22,24 +22,24 @@ function Collections() {
                     modules={[Navigation, A11y]}
                     spaceBetween={20}
                     slidesPerView={1}
-                    // breakpoints={{
-                    //     320: {
-                    //         slidesPerView: 1,
-                    //         spaceBetween: 15,
-                    //     },
-                    //     640: {
-                    //         slidesPerView: 2.5,
-                    //         spaceBetween: 20,
-                    //     },
-                    //     768: {
-                    //         slidesPerView: 3,
-                    //         spaceBetween: 20,
-                    //     },
-                    //     1024: {
-                    //         slidesPerView: 3.4,
-                    //         spaceBetween: 30,
-                    //     },
-                    // }}
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 15,
+                        },
+                        640: {
+                            slidesPerView: 1.5,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 1,
+                            spaceBetween: 30,
+                        },
+                    }}
                     loop={true}
                     navigation
                     onSwiper={(swiper) => console.log(swiper)}
@@ -48,18 +48,18 @@ function Collections() {
                 >
                     {collections && collections.map((collection) =>
                         <SwiperSlide key={collection.id}>
-                            <div className='ALLDATA d-flex flex-row-reverse align-items-center' >
-                                <div className='image col-8 me-4'>
+                            <div className={`${style.ALLDATA}`} >
+                                <div className={`${style.image} col-lg-8 `}>
                                     <img key={collection.id} src={collection.thumbnail} className={`d-block w-100 `} alt="First slide" />
                                 </div>
-                                <div className={`col-3 p-4 ${style.Left_text}`}>
+                                <div className={`col-lg-4 p-4 ${style.Left_text}`}>
                                     <h4 className={`${style.Style_h4}`}>
                                         <span className={`${style.COLORspan}`}>{collection.title}</span>
                                     </h4>
                                     <p className={`${style.Style_p}`}>
                                         {collection.description}
                                     </p>
-                                    <a href='#' className={` ${style.aa}`}> 
+                                    <a href='#' className={` ${style.aa}`}>
                                         <span className='me-2'>Discover More</span>
                                         <span>
                                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -73,9 +73,9 @@ function Collections() {
                     )}
                 </Swiper>
                 <div className={`mt-5 text-center container ${style.LASTBUTTON} `}>
-                        <a href='#'>
-                            <span>See All</span>
-                        </a>
+                    <a href='#'>
+                        <span>See All</span>
+                    </a>
                 </div>
             </div>
         </div>

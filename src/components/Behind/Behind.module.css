@@ -1,6 +1,27 @@
 
+@media (min-width:481px) and (max-width: 768px){
+    .Behind_h3{
+    width: 100% !important;
+    }
+    .Behind_p {
+        width: 100% !important;
+    }
+    .ALink{
+        padding: 7px 30px !important;
+        font-size: 0.8rem !important;
+    }
+}
+.overlay {
+    box-shadow: inset -1327px 0 33px 37px #381e0769;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(191 112 42 / 0%);
+}
 .scenes_section{
-    background-image: url(/public/img/shutterstock_1955215519.png);
+    background-image: url(/public/img/Group\ 13529.png);
     background-position: 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,7 +45,6 @@
 }   
 .Behind_h3{
     color: white !important;    
-    font-size: 2rem !important;
     font-weight: 700 !important;
     margin-bottom: 1rem !important;
     width: 60%;
@@ -35,7 +55,7 @@
     font-size: 1.1rem;
     font-weight: 400;
     color: #fff !important;
-    width: 60% !important;
+    width: 60%;
     margin-bottom: 1.5rem;
     font-family: "Greta Sans Std";
 }

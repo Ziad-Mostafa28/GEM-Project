@@ -1,3 +1,32 @@
+/*  320px — 480px:
+    481px — 768px:
+    769px — 1024px: 
+    1025px — 1200px:*/
+    @media (min-width:320px) and (max-width: 480px)  {
+    
+        .FirstULL {
+            display: flex !important;
+            flex-direction: row !important;
+            margin-top: 1rem;
+            place-self: start !important;
+        }
+        .ULL{
+            align-items: start !important;
+        }
+    }
+    @media (min-width:481px) and (max-width: 768px)  {
+        .FirstULL {
+            display: flex !important;
+            justify-content: flex-start !important;
+            flex-direction: row !important;
+            margin-top: 1rem;
+        }
+        .ULL{
+            align-items: start !important;
+        }
+    }
+ 
+
 .header {
     position: fixed;
     width: 100%;
@@ -8,29 +37,78 @@
     width: 100px !important;
     height: 95px !important;
 }
-ul {
+.styleNave {
+    align-items: flex-end;
+}
+
+.FirstULL {
+    place-self: end;
+}
+
+.ULL,
+.FirstULL {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 1rem;
 }
-ul li {
+.ULL li,
+.FirstULL li {
     list-style: none;
 }
-ul li svg {
+.ULL li svg,
+.FirstULL li svg {
     width: 1.5rem;
 }
 
-ul li a {
+.ULL li a,
+.FirstULL li a {
     text-decoration: none;
-    color: #4d4033;
+    color: #4d4033 !important;
     font-family: "Greta Sans Std";
 }
 
-ul li a:hover,
-ul li a svg:hover path  {
-    color: #e35a00;
+.ULL li a:hover,
+.ULL li a svg:hover path,  
+.FirstULL li a:hover,
+.FirstULL li a svg:hover path  {
+    color: #e35a00 !important;
     fill: #e35a00;
 }
 
+
+
+
+
+.SearchGroup{
+    position: relative;
+    border-radius: 10px;
+}
+.inputSearch {
+    border-radius: 10px;
+    padding: 2px 1.5rem 2px 15px;
+    height: auto;
+    border: 1px solid rgba(77,64,51,.7);
+    font-size: 1rem;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    color: #4d4033;
+    transform: scaleX(0);
+} 
+.FirstULL li a:hover .inputSearch{
+transform: scaleX(1);
+transform-origin: right;
+
+}
+.stylebutton {
+    background-color: white;
+    border: none;
+}
+
+
+
+.dropss:hover .naviii {
+    display: block;
+    transition: 0.7s;
+}
 

@@ -1,0 +1,177 @@
+@media (min-width:320px) and (max-width: 480px) {
+    .BackColor::after {
+        content: none !important;
+    }
+    .footer_routing {
+        padding-inline-start: 0 !important;
+    }
+    .footer_routing ul {
+        padding: 0 !important;
+    }
+    .Logooo {
+        margin-bottom: 2rem !important;
+    }
+    .H3 {
+        font-size: 1rem !important;
+    }
+    .Form{
+        display: flex;
+        flex-wrap: nowrap !important;
+    }
+    input {
+        padding: 0.3rem 0.7rem;
+    }
+    .Form button {
+        padding: 0.3rem 2rem !important;
+    }
+}
+@media (min-width:481px) and (max-width: 768px)  {
+    .Logooo {
+        margin-bottom: 3rem !important;
+    }
+    .BackColor::after{
+        content: none !important;
+    }
+    .footer_routing {
+        padding-inline-start: 0 !important;
+        padding-top: 3rem !important;
+    }
+    .H3 {
+        margin-bottom: 1rem !important;
+    }
+    .Form button {
+        padding: 0.4rem 1.5rem !important;
+    }
+}
+@media (min-width:769px) and (max-width: 1024px) {
+    .BackColor::after{
+        content: none !important;
+    }
+}
+
+.Logooo {
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+.H3 {
+    display: flex;
+    font-family: "Greta Sans Std";
+    font-size: 1.5rem ;
+    color: #4d4033;
+    margin-bottom: 1rem;
+}
+.ULL{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    cursor: pointer;
+}
+.ULL svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: rgb(77, 64, 51);
+}
+
+.ULL svg:hover {
+    fill:  #e35a00;
+    transition: 0.3s;
+}
+
+.Form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.Form input {
+    height: auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #4d4033af;
+    color: #4d4033;
+    transition: all .3s ease-in-out;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.Form button {
+    cursor: pointer;
+    padding: 0.4rem 2.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all .3s ease-in-out;
+    border: 1px solid transparent;
+    background-color: #e35a00;
+    color: #fff;
+}
+
+.Form button:hover {
+    background-color: white;
+    color: #e35a00;
+    transition: 0.3s;
+    border: 1px solid #e35a00;
+}
+.BackColor {
+    background-color: #FCF5F3;
+    position: relative;
+}
+.footer {
+    position: relative;
+}
+
+.BackColor::after {
+    position: absolute;
+    content: "";
+    right: -6.2rem;
+    height: 22.9rem;
+    background-color:  #FCF5F3;
+
+    bottom: 0;
+    width: 15%;
+}
+
+.footer_routing{
+    width: 100%;
+    height: 100%;
+    padding-top: 4em;
+    padding-inline-start: 4em;
+}
+
+.footer_routing li {
+    list-style: none;
+    margin-bottom: 0.75rem;
+}
+.footer_routing li a {
+    text-decoration: none;
+    color: #4d4033;
+    transition: all .2s ease-in-out;
+    position: relative;
+    padding-bottom: 2px;
+    display: inline-block;
+    font-family: "Greta Sans Std";
+    font-size: 1.5rem;
+}
+.footer_routing li a:hover {
+    color: #e35a00;
+}
+
+
+
+.STYLE_A::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    height: 0.1rem;
+    background-color:#e35a00;
+    bottom: 0;
+    width:0%;
+    transition: all .3s ease-in-out !important;
+}
+
+.STYLE_A:hover::after {
+    width: 100% !important;
+}

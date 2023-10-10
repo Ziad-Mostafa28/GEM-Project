@@ -1,6 +1,75 @@
+@media (min-width:320px) and (max-width: 480px) {
+.Left_text{
+    position: relative !important;;
+    left: 0 !important;
+    width: 100% !important;
+}
+.ALLDATA {
+    flex-direction: column !important;
+    align-items: normal !important;
+}
+.image {
+    margin-right: 0 !important;
+}
+.Collections {
+    --swiper-navigation-size: 20px !important;
+}
+.Collections [role=button] {
+    top: 23%;
+    width: 2rem !important;
+    height: 2rem !important; 
+}
+.COLORspan {
+    font-size: 1rem !important;
+}
+.Style_p {
+    font-size: 1rem !important;
+}
+.aa span {
+font-size: 0.8rem !important;
+}
+
+}
+@media (min-width:481px) and (max-width: 768px) {
+    .ALLDATA {
+        flex-direction: column !important;
+    }
+    .Left_text {
+        position: relative !important;
+        left: 0 !important;
+    }
+    .image {
+        margin-right: 0 !important;
+    }
+    .Collections [role=button] {
+        top: 23%;
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+    .Collections {
+        --swiper-navigation-size: 15px !important;
+    }
+    .aa span {
+        font-size: 0.7rem !important;
+    }
+    .Style_h4 {
+        font-size: 1rem !important;
+    }
+    .Style_p {
+        font-size: 1rem !important;
+    }
+}
 .Caption {
     text-align: center;
     margin-bottom: 1rem;
+}
+.Caption h3 {
+    font-size: 2.3rem !important;
+    font-weight: 700 !important;
+    color: #4d4033 !important;
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
+    font-family: "Greta Sans Std";
 }
 
 .Caption_p {
@@ -11,10 +80,13 @@
     font-family: "Greta Sans Std";
     font: 1em sans-serif;
 }
-
+.ALLDATA {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
 
 .Left_text {
-    width: 500px !important;
     position: absolute;
     left: 56px;
     background-color: white;
@@ -23,7 +95,9 @@
     font-family: "Greta Sans Std";
     border-radius: 0.4rem;
 }
-
+.image {
+    margin-right: 2.5rem ; 
+}
 .Style_h4 {
     font-size: 1.3rem;
     font-weight: 500;

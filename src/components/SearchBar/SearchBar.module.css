@@ -1,0 +1,19 @@
+
+
+.inputSearch {
+    border-radius: 10px;
+    padding: 2px 1.5rem 2px 15px;
+    height: auto;
+    border: 1px solid rgba(77,64,51,.7);
+    font-size: 1rem;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    color: #4d4033;
+    margin-right: 0.5rem;
+} 
+
+
+.stylebutton {
+    background-color: white;
+    border: none;
+}

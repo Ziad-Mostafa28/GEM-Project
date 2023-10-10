@@ -1,12 +1,77 @@
+
+@media (min-width:320px) and (max-width: 480px) {
+
+.image_banner {
+    height: calc(100vh - 117.5px);
+    object-fit: cover;
+    }
+    .FontSize_h5 {
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .FontSize_P {
+        font-size: 0.8rem !important;
+    }
+    .Button {
+        font-size: 0.8rem !important;
+        padding: 6px 20px !important;
+    }
+}
+@media (min-width:481px) and (max-width: 768px)  {
+    .FontSize_h5{
+        font-size: 1rem !important;
+    }
+    .FontSize_P {
+        font-size: 0.7rem !important; 
+    }
+    .Button{
+        font-size: 0.7rem !important;
+        padding: 5px 17px !important;
+    }
+}
+.firstSticky{
+    bottom: 44px;
+    font-size: 1rem;
+    left: 45%;
+    z-index: 999;
+    padding: 9px 30px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    background-color: #e35a00;
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    font-family: "Greta Sans Std";
+}
+.firstSticky:hover {
+    background-color: white;
+    color: #e35a00 !important;
+    border: 1px solid #e35a00;
+}
+.seconedSticky{
+    bottom: 44px;
+    font-size: 19px;
+    right: 3%;
+    z-index: 2;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 4px 23px 0 #00000059;
+}
+
+
 .Caption {
     right: auto!important;
-    bottom: auto !important;
+    /* bottom: auto !important; */
     top: 33% !important;
     left: 8% !important;
     text-align: start !important;
 }
 .home_banner {
-    padding-top: 116px;
+    padding-top: 111px;
 }
 .FontSize_h5{
     font-size: 2rem;

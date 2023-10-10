@@ -30,11 +30,11 @@ const Highlight = () => {
                         spaceBetween: 15,
                     },
                     640: {
-                        slidesPerView: 2.5,
+                        slidesPerView: 1.5,
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 3,
+                        slidesPerView: 2.5,
                         spaceBetween: 20,
                     },
                     1024: {
@@ -65,7 +65,7 @@ const Highlight = () => {
                         </div>
                     </SwiperSlide>
 
-                )};
+                )}
             </Swiper>
         </div>
     )

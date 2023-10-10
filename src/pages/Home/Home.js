@@ -4,16 +4,18 @@ import Highlight from '../../components/Highlight/Highlight'
 import Collections from '../../components/Collections/Collections'
 import Behind from '../../components/Behind/Behind'
 import Experience from '../../components/Experience/Experience'
+import Dublicate from '../../components/Dublicate/Dublicate'
 
 
 const Home = () => {
   return (
     <div>
       <Banner />
-      <Highlight/>
-      <Collections/>
-      <Behind/>
-      <Experience/>
+      <Highlight />
+      <Collections />
+      <Behind />
+      <Experience />
+      <Dublicate />
     </div>
   )
 }

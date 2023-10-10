@@ -4,6 +4,8 @@ import { homeContext } from "./store/homeContext";
 import axios from "axios";
 import Home from "./pages/Home/Home";
 import Header from "./components/Layout/Header/Header";
+import Footer from "./components/Layout/Footer/Footer";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 const App = () => {
   const [homeData, setHomeData] = useState([]);
@@ -14,7 +16,7 @@ const App = () => {
         "https://uat-iconcreations.com/2022/gem/public/api/web/home"
       );
       setHomeData(response.data.data);
-      console.log(response.data.data);
+      // console.log(response.data.data);
     }
     getHomeData();
   }, []);
@@ -25,6 +27,7 @@ const App = () => {
       <homeContext.Provider value={homeData}>
         <Home />
       </homeContext.Provider>
+      <Footer/>
     </>
   );
 };
