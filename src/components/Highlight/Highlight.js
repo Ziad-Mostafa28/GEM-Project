@@ -44,8 +44,8 @@ const Highlight = () => {
                 }}
                 loop={true}
                 navigation
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                // onSwiper={(swiper) => console.log(swiper)}
+                // onSlideChange={() => console.log('slide change')}
 
             >
                 {highlights && highlights.map((highlight) =>

@@ -3,7 +3,7 @@ import { homeContext } from '../../store/homeContext'
 import styles from './Dublicate.module.css'
 const Dublicate = () => {
     const AllDublicate = useContext(homeContext);
-    console.log(AllDublicate);
+    // console.log(AllDublicate);
     const homeSections = AllDublicate.home_sections;
 
 

@@ -42,8 +42,8 @@ function Collections() {
                     }}
                     loop={true}
                     navigation
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
+                    // onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log('slide change')}
 
                 >
                     {collections && collections.map((collection) =>
