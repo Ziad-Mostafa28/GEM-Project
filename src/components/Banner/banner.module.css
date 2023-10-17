@@ -1,6 +1,8 @@
 
 @media (min-width:320px) and (max-width: 480px) {
-
+    .firstSticky{
+        left: 28% !important;
+    }
 .image_banner {
     height: calc(100vh - 117.5px);
     object-fit: cover;
@@ -27,6 +29,16 @@
     .Button{
         font-size: 0.7rem !important;
         padding: 5px 17px !important;
+    }
+}
+@media (min-width:769px) and (max-width: 1024px)  {
+    .FontSize_h5{
+        font-size: 1.5rem;
+    }
+    .Caption {
+        top: 20% !important;
+        left: 4% !important;
+        width: 80%;
     }
 }
 .firstSticky{
@@ -66,7 +78,7 @@
 .Caption {
     right: auto!important;
     /* bottom: auto !important; */
-    top: 33% !important;
+    top: 33% ;
     left: 8% !important;
     text-align: start !important;
 }
