@@ -17,3 +17,12 @@
     background-color: white;
     border: none;
 }
+
+
+.Svgss {
+    font-family: "Greta Sans Std";
+    transition: all .3s ease-in-out;
+    order: 2;
+    fill: #4d4033;
+    font-size: 1.3rem;
+}
