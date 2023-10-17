@@ -5,7 +5,9 @@ import axios from "axios";
 import Home from "./pages/Home/Home";
 import Header from "./components/Layout/Header/Header";
 import Footer from "./components/Layout/Footer/Footer";
-import SearchBar from "./components/SearchBar/SearchBar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SearchResult from "./components/SearchResult/SearchResult";
+import CollectionDetails from "./components/SearchResult/CollectionDetails";
 
 const App = () => {
   const [homeData, setHomeData] = useState([]);
@@ -23,11 +25,32 @@ const App = () => {
 
   return (
     <>
-      <Header />
-      <homeContext.Provider value={homeData}>
-        <Home />
-      </homeContext.Provider>
-      <Footer/>
+      <Header /> 
+        <Routes>
+          {/* <Route path="/">
+            <homeContext.Provider value={homeData}>
+              <Home />
+            </homeContext.Provider>
+          </Route> */}
+
+
+
+
+          <Route
+            path="/"
+            element={
+              <homeContext.Provider value={homeData}>
+                <Home />
+              </homeContext.Provider>
+            }
+          />
+
+          <Route path="search-result" element={<SearchResult />} />
+          <Route path="search-result/:id" element={<CollectionDetails />} />
+
+
+        </Routes> 
+      <Footer />
     </>
   );
 };
