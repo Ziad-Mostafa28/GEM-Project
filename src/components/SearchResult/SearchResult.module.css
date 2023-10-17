@@ -1,0 +1,45 @@
+
+
+
+.SearchResult {
+    padding-top: 115px;
+    display: flex;
+}
+
+.stylerow{
+    border-radius: 10px;
+    box-shadow: 0 32px 64px rgba(0,0,0,.06);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    justify-content: space-between;
+    overflow-wrap: break-word;
+}
+.Search_h3 {
+    font-family: "Greta Sans Std" !important;
+    color: #4d4033 !important;
+    font-weight: bold !important;
+    font-size: 1.6rem !important;
+    margin-bottom: 1.2rem !important;
+}
+.StyleA {
+    text-decoration: none;
+}
+
+.Search_p {
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: "Greta Sans Std";
+    color: rgba(77,64,51,.7) !important;
+}
+
+.styleLink{
+    border-top: 2px solid rgba(227,90,0,.502);
+    padding-top: 10px;
+    text-transform: capitalize;
+    color: #e35a00;
+    font-family: "Greta Sans Std" ;
+    font-size: 1.25rem;
+}
