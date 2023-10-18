@@ -3,25 +3,25 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import style from './CollectionDetails.module.css'
 import Breadcrumb from '../Layout/Breadcrumb/Breadcrumb';
+import TopArtifact from '../Artifact/TopArtifact';
 
 const CollectionDetails = () => {
 
     const params = useParams();
 
-    const [posts, setPosts] = useState([])
+    const [data, setData] = useState([])
 
-    // console.log(posts.collection?.title);
+    // console.log(LastData.collection?.title);
     useEffect(() => {
         axios.get(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/highlights/${params.id}/details`)
             .then(res => {
-                setPosts(res.data.data)
+                setData(res.data.data)
                 console.log(res)
             })
             .catch(err => {
                 console.log(err)
             })
-    }, [params.id])
-    console.log(params, 'posts')
+    }, [params.id]) 
 
     return (
         <div>
@@ -35,14 +35,14 @@ const CollectionDetails = () => {
                             </svg>
                         </button>
 
-                        <Breadcrumb collection={posts.collection?.title} artTitle={posts?.title} />
+                        <Breadcrumb collection={data.collection?.title} artTitle={data?.title} />
                     </div>
                     <h3 className={`title mb-4 mt-4 d-flex ${style.h3Title}`}>
                         <span>
-                            {posts.title}
+                            {data.title}
                         </span>
                     </h3>
-                        
+                        <TopArtifact data={data}/>
                 </div>
             </section>
 
