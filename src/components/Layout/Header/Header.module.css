@@ -119,8 +119,8 @@ transform-origin: right;
 
 @media (min-width:320px) and (max-width: 768px)  {
     .navsBar {
-            display: flex !important;
-            flex-direction: row;
+            /* display: flex !important;
+            flex-direction: row; */
     }
 
     .stylenavebar_nav{
