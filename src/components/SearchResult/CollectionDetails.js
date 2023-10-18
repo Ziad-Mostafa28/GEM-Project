@@ -42,7 +42,7 @@ const CollectionDetails = () => {
                             {posts.title}
                         </span>
                     </h3>
-
+                        
                 </div>
             </section>
 
