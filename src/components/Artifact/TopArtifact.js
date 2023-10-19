@@ -23,7 +23,7 @@ const TopArtifact = ({ data }) => {
 
     // Zoom out function
     const handleZoomOut = () => {
-        setScale((scale) => this.scale - 0.1);
+        setScale((scale) => scale - 0.1);
     };
     const handleReset = () => {
         setScale((scale) => 1);
@@ -156,13 +156,19 @@ const TopArtifact = ({ data }) => {
                             </span>
                         </p>
                         }
-                        {data?.category?.title && <p className={`${style.introduction_Text}`}>
+                        {data?.category && <p className={`${style.introduction_Text}`}>
                             Catagory:
                             <span className={`ps-2 mb-0 ${style.mainBoxx_box_text}`}>
-                                {data.category?.title}
+                                {data.category}
                             </span>
                         </p>
                         }
+                        {data?.dynasty && <p className={`${style.introduction_Text}`}>
+                            Dynasty:
+                            <span className={`ps-2 mb-0 ${style.mainBoxx_box_text}`}>
+                                {data.dynasty}
+                            </span>
+                        </p>}
                     </div>
                 </div>
             </div>
