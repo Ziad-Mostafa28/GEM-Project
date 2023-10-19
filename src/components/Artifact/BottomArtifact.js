@@ -19,7 +19,7 @@ const BottomArtifact = ({ data }) => {
                                     <h6 className={`${style.Style_H6}`}>
                                         {Allslides?.title}
                                     </h6>
-                                    <a href='/' className={`${style.New_Links}`}>
+                                    <a href={`/search-result/${Allslides.id}`} className={`${style.New_Links}`}>
                                         See Details
                                     </a>
                                 </div>
