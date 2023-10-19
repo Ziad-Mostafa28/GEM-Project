@@ -23,7 +23,7 @@ const TopArtifact = ({ data }) => {
 
     // Zoom out function
     const handleZoomOut = () => {
-        setScale((scale) => scale - 0.1);
+        setScale((scale) => this.scale - 0.1);
     };
     const handleReset = () => {
         setScale((scale) => 1);
@@ -126,9 +126,42 @@ const TopArtifact = ({ data }) => {
                     <p className={`${style.introduction_Text}`}>
                         GEM Number:
                         <span className={`ps-2 mb-0 ${style.mainBoxx_box_text}`}>
-                            {data.gem_number}
+                            {data?.gem_number}
                         </span>
                     </p>
+                    <p className={`${style.introduction_Text}`}>
+                        Collection:
+                        <span className={`ps-2 mb-0 ${style.mainBoxx_box_text}`}>
+                            {data.collection?.title}
+                        </span>
+                    </p>
+                    {data?.theme?.title && <p className={`${style.introduction_Text}`}>
+                        Theme:
+                        <span className={`ps-2 mb-0 ${style.mainBoxx_box_text}`}>
+                            {data.theme?.title}
+                        </span>
+                    </p>}
+                    {data?.materials?.title && <p className={`${style.introduction_Text}`}>
+                        Materials:
+                        <span className={`ps-2 mb-0 ${style.mainBoxx_box_text}`}>
+                            {data.materials?.title}
+                        </span>
+                    </p>
+                    }
+                    {data?.period?.title && <p className={`${style.introduction_Text}`}>
+                        Period:
+                        <span className={`ps-2 mb-0 ${style.mainBoxx_box_text}`}>
+                            {data.period?.title}
+                        </span>
+                    </p>
+                    }
+                    {data?.category?.title && <p className={`${style.introduction_Text}`}>
+                        Catagory:
+                        <span className={`ps-2 mb-0 ${style.mainBoxx_box_text}`}>
+                            {data.category?.title}
+                        </span>
+                    </p>
+                    }
                 </div>
             </div>
         </div>
