@@ -69,3 +69,28 @@
     font-size: 1.2rem;
     font-family: "Greta Sans Std";
 }
+
+.mainBoxx_box {
+    box-shadow: 0 32px 64px rgba(0,0,0,.06);
+    padding: 2rem;
+    border-radius: 5px;
+    height: 100%;
+}
+.title {
+    color: #e35a00;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    font-family: "Greta Sans Std";
+}
+.Seconed_mainBoxx_box_text {
+    color: #4d4033;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    font-family: "Greta Sans Std";
+}
+.mainBoxx_box_text_span {
+    opacity: 60%;
+    font-family: "Greta Sans Std";
+}
