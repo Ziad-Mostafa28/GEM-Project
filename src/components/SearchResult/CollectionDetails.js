@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import style from './CollectionDetails.module.css'
 import Breadcrumb from '../Layout/Breadcrumb/Breadcrumb';
 import TopArtifact from '../Artifact/TopArtifact';
+import BottomArtifact from '../Artifact/BottomArtifact';
 
 const CollectionDetails = () => {
 
@@ -21,7 +22,7 @@ const CollectionDetails = () => {
             .catch(err => {
                 console.log(err)
             })
-    }, [params.id]) 
+    }, [params.id])
 
     return (
         <div>
@@ -42,7 +43,8 @@ const CollectionDetails = () => {
                             {data.title}
                         </span>
                     </h3>
-                        <TopArtifact data={data}/>
+                    <TopArtifact data={data} />
+                    <BottomArtifact data={data} />
                 </div>
             </section>
 
