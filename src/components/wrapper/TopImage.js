@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './TopImage.module.css'
 
-const TopImage = () => {
+const TopImage = ({ Link_Top, paragraph_text }) => {
 
     return (
         <div className={`img-full img-block ${style.banner_image}`}>
@@ -11,12 +11,12 @@ const TopImage = () => {
             <div className={`${style.Banner_content}`}>
                 <div className='container'>
                     <h3 className={`${style.banner_content_title}`}>
-                        <a href='/'>
-                            
+                        <a className={`${style.Link_image}`} href='/'>
+                            {Link_Top}
                         </a>
                     </h3>
                     <p className={`${style.banner_content_text}`}>
-                        Everything you need to know before visiting the GEM
+                        {paragraph_text}
                     </p>
                 </div>
             </div>

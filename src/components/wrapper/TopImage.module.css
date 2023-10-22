@@ -27,7 +27,11 @@
     position: relative;
     max-width: 100%;
 }
-
+.Link_image {
+    text-decoration: none;
+    color: white;
+    opacity: 70%;
+}
 .Banner_content {
     position: absolute;
     left: 0;
