@@ -5,7 +5,7 @@ import SearchBar from '../../SearchBar/SearchBar'
 const Header = () => {
     return (
         <header>
-            <nav className='navbar navbar navbar-expand-lg navbar-light'>
+            <nav className='p-0 navbar navbar navbar-expand-lg navbar-light'>
                 <div className='container'>
                     <a className={`img-block ${classes.navbar_box_logo}`} href='/'>
                         <span className={`${classes.Spanss}`}>
@@ -45,7 +45,7 @@ const Header = () => {
                             </ul>
                             <ul className={`list-unstyled ${classes.bottom_ULL}`}>
                                 <li className={`${classes.middle_li}`}>
-                                    <a className={`${classes.bottom_li}`} href='/'>
+                                    <a className={`${classes.bottom_li}`} href='visit'>
                                         Visit
                                     </a>
                                     <ul className={`${classes.DropsDown}`}>
