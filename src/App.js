@@ -5,7 +5,7 @@ import axios from "axios";
 import Home from "./pages/Home/Home";
 import Header from "./components/Layout/Header/Header";
 import Footer from "./components/Layout/Footer/Footer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import SearchResult from "./components/SearchResult/SearchResult";
 import CollectionDetails from "./components/SearchResult/CollectionDetails";
 
@@ -27,14 +27,6 @@ const App = () => {
     <>
       <Header /> 
         <Routes>
-          {/* <Route path="/">
-            <homeContext.Provider value={homeData}>
-              <Home />
-            </homeContext.Provider>
-          </Route> */}
-
-
-
 
           <Route
             path="/"
