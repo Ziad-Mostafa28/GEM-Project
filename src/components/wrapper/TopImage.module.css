@@ -1,3 +1,13 @@
+@media   (max-width: 767px) {
+    .banner_image img{
+        height: 687px !important;
+        object-fit: cover;
+    }
+    .banner_image p{
+        width: 100% !;
+    }
+}
+
 .banner_image{
     position: relative;
     margin-top: 113px;
@@ -59,7 +69,10 @@
     text-decoration: none;
     color: white;
     opacity: 70%;
-    font-family: "Greta Sans Std";
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: all .3s ease-in-out;
+    font-size: 2rem;
 }
 
 .banner_image p {
