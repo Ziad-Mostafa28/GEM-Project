@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import TopImage from '../../components/wrapper/TopImage'
 import axios from 'axios';
 import Visittaps from '../../components/VisitTaps/Visittap';
+import Card from '../../components/wrapper/Card';
 
 
 
@@ -42,6 +43,8 @@ const Visit = (props) => {
                 </div>
             </TopImage>
             <Visittaps data={visitdata} />
+            <Card data={visitdata} />
+
         </>
     )
 }
