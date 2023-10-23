@@ -50,17 +50,17 @@ const Header = () => {
                                     </a>
                                     <ul className={`${classes.DropsDown}`}>
                                         <li className={`${classes.DropsDown_li}`}>
-                                            <a className={`${classes.bottom_link_a}`} href='/'>
+                                            <a className={`${classes.bottom_link_a}`} href='#mu-open-hour'>
                                                 Opening Hours
                                             </a>
                                         </li>
                                         <li className={`${classes.DropsDown_li}`}>
-                                            <a className={`${classes.bottom_link_a}`} href='/'>
+                                            <a className={`${classes.bottom_link_a}`} href='#mu-buy-tickets'>
                                                 Tickets
                                             </a>
                                         </li>
                                         <li className={`${classes.DropsDown_li}`}>
-                                            <a className={`${classes.bottom_link_a}`} href='/'>
+                                            <a className={`${classes.bottom_link_a}`} href='#mu-author'>
                                                 Visitor Guide
                                             </a>
                                         </li>
