@@ -30,7 +30,9 @@ const Visit = (props) => {
                 </span>
                 <div>
                     <div className='container'>
-                        <h3> <a href=''> {visitdata.banner_title} </a></h3>
+                        <h3>
+                            <a href=''> {visitdata.banner_title} </a>
+                        </h3>
                         <p>
 
                             {visitdata.banner_description}
