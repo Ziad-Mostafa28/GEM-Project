@@ -11,13 +11,13 @@ const Card = ({ data }) => {
                     <p>{data?.visitor_guide_description}</p>
                     <div className='row'>
                         {
-                            data && data?.visitor_guide_list?.map((alll) =>
+                            data && data?.visitor_guide_list?.map((items) =>
                                 <div className='mb-4 col-lg-4 col-md-6'>
                                     <div className={`${style.All_card}`}>
                                         <div className={`${style.Top_image_Incard}`}>
                                             <div className='img-block'>
                                                 <span className={`d-block h-100 ${style.Span_image_card}`}>
-                                                    <img className='w-100 object-fit-cover' src={alll?.image} />
+                                                    <img className='w-100 object-fit-cover' src={items?.image} />
                                                 </span>
                                             </div>
                                         </div>
@@ -25,14 +25,14 @@ const Card = ({ data }) => {
                                             <div>
                                                 <h4>
                                                     <span className={`${style.Icon_span}`}>
-                                                        <img className=' object-fit-contain' src={alll?.icon} />
+                                                        <img className=' object-fit-contain' src={items?.icon} />
                                                     </span>
                                                     <span className={`${style.Card_body_title}`}>
-                                                        {alll?.title}
+                                                        {items?.title}
                                                     </span>
                                                 </h4>
                                                 <p className={`${style.Card_body_Text}`}>
-                                                    {alll?.description.slice(0, 130)}..
+                                                    {items?.description.slice(0, 130)}..
                                                 </p>
                                             </div>
                                             <a className={`${style.Link_card}`} href='/'>
