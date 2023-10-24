@@ -35,7 +35,6 @@ const Visit = (props) => {
                             <a href=''> {visitdata.banner_title} </a>
                         </h3>
                         <p>
-
                             {visitdata.banner_description}
 
                         </p>
