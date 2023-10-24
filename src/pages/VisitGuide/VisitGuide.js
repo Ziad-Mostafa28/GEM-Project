@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import TopImage from '../../components/wrapper/TopImage'
 import axios from 'axios';
+import Guidetab from '../../components/VisitTaps/Guidetab';
 
 const VisitGuide = () => {
 
@@ -28,7 +29,7 @@ const VisitGuide = () => {
                 <div>
                     <div className='container'>
                         <h3>
-                            
+
                             <a href=''> {Guidedata.banner_title} </a>
                         </h3>
                         <p>
@@ -38,7 +39,8 @@ const VisitGuide = () => {
                     </div>
                 </div>
             </TopImage>
-            
+
+            <Guidetab data={Guidedata} />
         </div>
     )
 }
