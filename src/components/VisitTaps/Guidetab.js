@@ -65,9 +65,60 @@ const Guidetab = ({ data }) => {
                                 </div>
                             </div>
                         </div>
+
+                    </div>
+                    <div className={`text-center ${style.Map_Card_link}`}>
+                        <a href='/' className={`${style.Seconed_Map_Card_link}`}>
+                            <span>
+                                Get Directions
+                            </span>
+                        </a>
                     </div>
                 </div>
             </section>
+
+            <section id='mu-Gem-Map' className={`${style.Parking}`}>
+                <div className='container'>
+                    <h4 className={`${style.title_h}`} >
+                        {data?.get_map_title_2}
+                    </h4>
+                    <p className={`${style.text_p}`} >
+                        {data?.get_map_description_2}
+                    </p>
+                    <img className={`img-fluid object-fit-contain w-100`} src={data?.get_map_image} />
+                </div>
+            </section>
+
+            <section id='mu-Health-And-Safety' className={`${style.Parking}`} >
+                <div className="container">
+                    <h4 className={`${style.title_h}`} >
+                        Health And Safety
+                    </h4>
+                    <div className='row'>
+                        {data && data?.heakthy_and_safty?.map((Health) =>
+                            <div className='col-md-6'>
+                                <div className={`${style.main_box_drop}`}>
+                                    <div className={`mb-4  ${style.accrod}`}>
+                                        <div className={` ${style.acrrod_item}`}>
+                                            <h2>
+                                                <button class={`btn btn-primary ${style.accrod_button}`} type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                    {Health?.title}
+                                                </button>
+                                            </h2>
+                                            <div class="collapse" id="collapseExample">
+                                                <div class="card card-body">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </section >
         </>
     )
 }
