@@ -60,7 +60,7 @@ const Header = () => {
                                             </a>
                                         </li>
                                         <li className={`${classes.DropsDown_li}`}>
-                                            <a className={`${classes.bottom_link_a}`} href='#mu-author'>
+                                            <a className={`${classes.bottom_link_a}`} href='visit-Guide'>
                                                 Visitor Guide
                                             </a>
                                         </li>
