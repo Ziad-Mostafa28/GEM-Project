@@ -146,7 +146,6 @@
     color: inherit;
     background-color: inherit;
     border: none;
-    /* box-shadow: 0 32px 64px rgba(0,0,0,.06); */
 }
 .acrrod_item {
     border: none !important;
@@ -169,4 +168,21 @@
     font-weight: 700 !important;
     font-size: 1.2rem !important;
     border: none !important;
+}
+.Parking li{
+    padding-left: 1rem;
+    position: relative;
+    font-size: 1rem;
+    color: #4d4033;
+    margin-bottom: 0.5rem;
+}
+.Parking li::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0.35rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #e35a00;
+    border-radius: 50%;
 }

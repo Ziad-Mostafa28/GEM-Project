@@ -2,6 +2,9 @@ import React from 'react'
 import style from './Guidetab.module.css'
 const Guidetab = ({ data }) => {
 
+    const styleObj = {
+        color: 'black'
+    }
     return (
         <>
             <div class={`navbar-collapse d-block ${style.collapse}`} id="bs-example-navbar-collapse-1">
@@ -98,23 +101,24 @@ const Guidetab = ({ data }) => {
                         {data && data?.heakthy_and_safty?.map((Health) =>
                             <div className='col-md-6'>
                                 <div className={`${style.main_box_drop}`}>
-                                    <div className={`mb-4  ${style.accrod}`}>
-                                        <div className={` ${style.acrrod_item}`}>
-                                            <h2>
-                                                <button class={`btn btn-primary ${style.accrod_button}`} type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                                    {Health?.title}
+
+                                    <div key={Health.id} className={`accordion accordion-flush mb-4  ${style.accrod}`} id={`accordionFlushExample${Health.id}`}>
+                                        <div className="accordion-item">
+                                            <h2 className={`accordion-header ${style.acrrod_item}`} id="flush-headingOne">
+                                                <button className={`accordion-button collapsed ${style.accrod_button}`} type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    {Health.title}
                                                 </button>
                                             </h2>
-                                            <div class="collapse" id="collapseExample">
-                                                <div class="card card-body">
-
+                                            <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent={`#accordionFlushExample${Health.id}`}>
+                                                <div className="accordion-body">
+                                                    <p dangerouslySetInnerHTML={{ __html: Health.description }} style={styleObj} />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         )}
                     </div>
                 </div>
