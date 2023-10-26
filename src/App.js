@@ -9,44 +9,44 @@ import { Route, Routes } from "react-router-dom";
 import SearchResult from "./components/SearchResult/SearchResult";
 import CollectionDetails from "./components/SearchResult/CollectionDetails";
 import Visit from "./pages/Visit/Visit";
-import VisitGuide from "./pages/VisitGuide/VisitGuide";
+import VisitGuide from "./pages/VisitGuide/VisitGuide"; 
+import endPoints, { httpData } from "./store/Alldata";
 
 const App = () => {
   const [homeData, setHomeData] = useState([]);
 
   useEffect(() => {
     async function getHomeData() {
-      const response = await axios.get(
-        "https://uat-iconcreations.com/2022/gem/public/api/web/home"
-      );
+      const response = await httpData.get(endPoints.home); 
       setHomeData(response.data.data);
-      // console.log(response.data.data);
     }
     getHomeData();
   }, []);
 
+
+
   return (
     <>
-      <Header /> 
-        <Routes>
+      <Header />
+      <Routes>
 
-          <Route
-            path="/"
-            element={
-              <homeContext.Provider value={homeData}>
-                <Home />
-              </homeContext.Provider>
-            }
-          />
+        <Route
+          path="/"
+          element={
+            <homeContext.Provider value={homeData}>
+              <Home />
+            </homeContext.Provider>
+          }
+        />
 
-          <Route path="search-result" element={<SearchResult />} />
-          <Route path="search-result/:id" element={<CollectionDetails />} />
-          <Route path="visit" element={<Visit/>} />
-          <Route path="visit-Guide" element={<VisitGuide/>} />
+        <Route path="search-result" element={<SearchResult />} />
+        <Route path="search-result/:id" element={<CollectionDetails />} />
+        <Route path="visit" element={<Visit />} />
+        <Route path="visit-Guide" element={<VisitGuide />} />
 
 
-        </Routes> 
-      <Footer />
+      </Routes>
+      <Footer /> 
     </>
   );
 };
