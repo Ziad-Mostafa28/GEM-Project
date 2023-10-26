@@ -6,7 +6,7 @@ const instance = axios.create({
     headers: { 'language': lang }
 });
 
-export const httpData = instance
+export const httpData = instance 
 
 const endPoints = {
     home: 'home',
