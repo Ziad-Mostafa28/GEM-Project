@@ -220,6 +220,8 @@ header {
     text-decoration: none !important;
     color: #4d4033 !important;
     font-family: "Greta Sans Std";
+    border: none;
+    background-color: white;
 }
 .style_link:hover {
     text-decoration: none;
