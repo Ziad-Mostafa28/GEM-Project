@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { homeContext } from "./store/homeContext";
-import axios from "axios";
 import Home from "./pages/Home/Home";
 import Header from "./components/Layout/Header/Header";
 import Footer from "./components/Layout/Footer/Footer";
@@ -39,10 +38,12 @@ const App = () => {
           }
         />
 
+
         <Route path="search-result" element={<SearchResult />} />
         <Route path="search-result/:id" element={<CollectionDetails />} />
         <Route path="visit" element={<Visit />} />
         <Route path="visit-Guide" element={<VisitGuide />} />
+
 
 
       </Routes>
