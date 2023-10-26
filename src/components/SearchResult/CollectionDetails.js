@@ -16,8 +16,7 @@ const CollectionDetails = () => {
     useEffect(() => {
         axios.get(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/highlights/${params.id}/details`)
             .then(res => {
-                setData(res.data.data)
-                console.log(res)
+                setData(res.data.data) 
             })
             .catch(err => {
                 console.log(err)

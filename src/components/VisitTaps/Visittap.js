@@ -1,7 +1,6 @@
 import React from 'react'
 import style from './visittap.module.css'
-const Visittaps = (data) => {
-    console.log(data, 'qqqqqqqqqq')
+const Visittaps = (data) => { 
     return (
         <>
             <div class={`navbar-collapse d-block ${style.collapse}`} id="bs-example-navbar-collapse-1">

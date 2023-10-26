@@ -17,9 +17,7 @@ const SearchBar = () => {
                 navigate('/search-result', { state: data });
             });
     };
-
-    console.log(data);
-
+ 
     return (
 
         <div className='input-wrapper' >

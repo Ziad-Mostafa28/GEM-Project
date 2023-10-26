@@ -15,12 +15,10 @@ const Visit = (props) => {
             const response = await axios.get(
                 "https://uat-iconcreations.com/2022/gem/public/api/web/visit"
             );
-            setvisitdata(response.data.data);
-            // console.log(response.data.data);
+            setvisitdata(response.data.data); 
         }
         getvisitData();
-    }, []);
-    console.log(visitdata, 'sdsdsd');
+    }, []); 
 
     return (
         <>

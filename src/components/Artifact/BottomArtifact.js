@@ -1,7 +1,6 @@
 import React from 'react'
 import style from './BottomArtifact.module.css'
-const BottomArtifact = ({ data }) => {
-    console.log(data, "ss");
+const BottomArtifact = ({ data }) => { 
     return (
         <section className={`mt-0 ${style.bottomSection}`}>
             <h3 className={`text-start ${style.First_title}`}> Related Artefacts</h3>

@@ -12,12 +12,10 @@ const VisitGuide = () => {
             const response = await axios.get(
                 "https://uat-iconcreations.com/2022/gem/public/api/web/visit/visitor-guide"
             );
-            setGuidedata(response.data.data);
-            // console.log(response.data.data);
+            setGuidedata(response.data.data); 
         }
         getGuidedata();
-    }, []);
-    console.log(Guidedata, 'sdsdsd');
+    }, []); 
 
 
     return (

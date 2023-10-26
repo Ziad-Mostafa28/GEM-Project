@@ -4,13 +4,11 @@ import style from './SearchResult.module.css'
 
 const SearchResult = () => {
     const location = useLocation();
-    const data = location.state.data;
-    // console.log(data, "ddd")
+    const data = location.state.data; 
     const [flag, setFlag] = useState(false);
     const handleClick = () => {
         setFlag(!flag)
-    }
-    console.log(flag,'flag');
+    } 
     return (
         <div className={`${style.SearchResult}`}>
             <div className='container'>

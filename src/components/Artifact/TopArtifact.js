@@ -38,8 +38,7 @@ const TopArtifact = ({ data }) => {
         const handleMouseDown = (e) => {
             if (e.button === 2) {
                 isDragging = true;
-                prevPosition = { x: e.clientX, y: e.clientY };
-                console.log(e.button, "ssss")
+                prevPosition = { x: e.clientX, y: e.clientY }; 
             }
         };
 
