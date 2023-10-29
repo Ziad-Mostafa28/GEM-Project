@@ -1,0 +1,62 @@
+
+@media (min-width:320px) and (max-width: 480px) {
+    .imgss {
+        margin-bottom: 0 !important;
+    }
+
+.img{    height: 100% !important;
+    object-fit: cover!important;}
+}
+@media (min-width:481px) and (max-width: 768px)  {
+.imgss {
+    margin-bottom: 0 !important;
+}
+.double span {
+    font-size: 1.4rem !important;
+} 
+}
+
+
+.double img {
+    height: 363px;
+    object-fit: cover;
+}
+.double img:hover {
+    transform: scale(1.1);
+    transition: 0.8s all;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 2rem 3rem !important;
+    background-color: #FCF5F3;
+    font-family: "Greta Sans Std";
+    margin-bottom: 2rem;
+}
+
+.double span {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #e35a00;
+    margin-bottom: 1.5rem;
+    font-family: "Greta Sans Std";
+}
+.double span:hover {
+    color: #e35a00;
+}
+
+.double p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: rgba(77,64,51,.7);
+    font-family: "Greta Sans Std";
+}
+
+
+.boxes:nth-child(even) .kides_box{
+    flex-direction: row-reverse;
+}
