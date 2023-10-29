@@ -4,8 +4,9 @@ import SearchBar from '../../SearchBar/SearchBar'
 
 const Header = () => {
 
-    const handleClick = (lang) => {
-        localStorage.setItem('lang', lang)
+    const handleClick = (language) => {
+        localStorage.setItem('language', language)
+        window.location.reload();
     }
     return (
         <header>
