@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './Guidetab.module.css'
 import Double from '../wrapper/Double'
+import Group from './Group'
 
 const Guidetab = ({ data }) => {
 
@@ -153,6 +154,12 @@ const Guidetab = ({ data }) => {
                     </div>
                 </Double>
             </section >
+
+
+            <section className={`${style.Parking}`}>
+                <Group data={data} />
+            </section>
+
         </>
     )
 }
