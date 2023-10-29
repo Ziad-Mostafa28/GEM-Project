@@ -186,3 +186,17 @@
     background-color: #e35a00;
     border-radius: 50%;
 }
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 2rem 3rem !important;
+    background-color: #FCF5F3;
+    font-family: "Greta Sans Std";
+    margin-bottom: 2rem;
+}
+.boxes:nth-child(even) .kides_box{
+    flex-direction: row-reverse;
+}

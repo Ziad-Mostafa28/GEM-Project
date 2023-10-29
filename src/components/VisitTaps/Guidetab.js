@@ -1,5 +1,7 @@
 import React from 'react'
 import style from './Guidetab.module.css'
+import Double from '../wrapper/Double'
+
 const Guidetab = ({ data }) => {
 
     const styleObj = {
@@ -105,12 +107,12 @@ const Guidetab = ({ data }) => {
                                     <div key={Health.id} className={`accordion accordion-flush mb-4  ${style.accrod}`} id={`accordionFlushExample${Health.id}`}>
                                         <div className="accordion-item">
                                             <h2 className={`accordion-header ${style.acrrod_item}`} id="flush-headingOne">
-                                                <button className={`accordion-button collapsed ${style.accrod_button}`} type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                <button key={Health.id} className={`accordion-button collapsed ${style.accrod_button}`} type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                                     {Health.title}
                                                 </button>
                                             </h2>
                                             <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent={`#accordionFlushExample${Health.id}`}>
-                                                <div className="accordion-body">
+                                                <div key={Health.id} className="accordion-body">
                                                     <p dangerouslySetInnerHTML={{ __html: Health.description }} style={styleObj} />
                                                 </div>
                                             </div>
@@ -122,6 +124,34 @@ const Guidetab = ({ data }) => {
                         )}
                     </div>
                 </div>
+            </section >
+
+            <section className={`${style.Parking}`}>
+                <h3 className={`${style.title_h}`}>{data?.tours_title}</h3>
+                <p className={`${style.text_p}`} >{data.tours_pharagraph}</p>
+                <Double>
+                    <div >
+                        {data?.tours && data?.tours.map((newData) =>
+                            <div key={newData?.id} className={style.boxes} >
+                                <div className={`row d-flex  mx-0 overflow-hidden ${style.kides_box}`}>
+                                    <div className={`col-lg-6  col-sm-12 p-0 overflow-hidden `} style={{ marginBottom: '2rem' }} >
+                                        <img key={newData?.id} src={newData?.image} className={`d-block w-100 `} alt="First slide" />
+                                    </div>
+                                    <div className={`col-lg-6  col-sm-12 ${style.text} `}>
+                                        <h3>
+                                            <span >
+                                                {newData?.title}
+                                            </span>
+                                        </h3>
+                                        <p
+                                            dangerouslySetInnerHTML={{ __html: newData?.description }} >
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </Double>
             </section >
         </>
     )
