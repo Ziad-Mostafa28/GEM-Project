@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import TopImage from '../../components/wrapper/TopImage'
-import axios from 'axios';
 import Visittaps from '../../components/VisitTaps/Visittap';
 import Card from '../../components/wrapper/Card';
+import endPoints, { httpData } from '../../store/Alldata';
 
 
 
@@ -12,9 +12,7 @@ const Visit = (props) => {
 
     useEffect(() => {
         async function getvisitData() {
-            const response = await axios.get(
-                "https://uat-iconcreations.com/2022/gem/public/api/web/visit"
-            );
+            const response = await httpData.get(endPoints.visit);
             setvisitdata(response.data.data); 
         }
         getvisitData();
