@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import endPoints, { httpData } from '../../store/Alldata';
 import TopImage from '../../components/wrapper/TopImage';
+import MuseumTabs from '../../components/MeuseumSec/MuseumTabs';
+import SwipMuseum from '../../components/MeuseumSec/SwipMuseum';
+import ChildMuseum from '../../components/MeuseumSec/ChildMuseum';
 
-const Museum = (props) => {
+
+const Museum = (data) => {
 
     const [museumdata, setMuseumdata] = useState([]);
 
@@ -14,7 +18,7 @@ const Museum = (props) => {
         getmuseumdata();
     }, []);
 
-    console.log(museumdata, 'sds')
+    console.log(museumdata, 'sdd')
 
     return (
         <div>
@@ -34,8 +38,17 @@ const Museum = (props) => {
                     </div>
                 </div>
             </TopImage>
+
+            <MuseumTabs data={museumdata} />
+
+            <section className='mb-4' id="mu-Children's-Museum">
+                <SwipMuseum data={museumdata} />
+            </section>
+
+            <ChildMuseum data={museumdata} />
         </div>
     )
+
 }
 
 export default Museum
