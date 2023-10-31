@@ -1,0 +1,59 @@
+
+@media (max-width: 767px) {
+    .welcome
+    {
+        padding: 15px 0;
+        margin-top: 25px;
+    }
+    .taps {
+        column-gap: 0 !important;
+    }
+    .taps a{
+        padding: 0 0.5rem !important;
+    }
+}
+
+.taps {
+    padding: 0.5rem 0;
+    display: flex;
+    list-style: none;
+    place-content: center;
+    column-gap: 2rem;
+}
+
+.taps a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 0 1rem;
+    transition: all .3s ease-in-out;
+    color: rgba(77,64,51,.7);
+}
+
+.welcome {
+    padding: 0;
+    position: relative;
+    margin-top: 100px;
+}
+
+.mainBoxx_boxx {
+    padding: 2rem;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.title_h {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #4d4033;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    
+}
+.text_p {
+    font-weight: 400;
+    color: rgba(77,64,51,.7);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
