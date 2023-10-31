@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import TopImage from '../../components/wrapper/TopImage'
 import axios from 'axios';
 import Guidetab from '../../components/VisitTaps/Guidetab';
+import Accessibility from '../../components/VisitTaps/Accessibility';
 
 const VisitGuide = () => {
 
@@ -12,10 +13,10 @@ const VisitGuide = () => {
             const response = await axios.get(
                 "https://uat-iconcreations.com/2022/gem/public/api/web/visit/visitor-guide"
             );
-            setGuidedata(response.data.data); 
+            setGuidedata(response.data.data);
         }
         getGuidedata();
-    }, []); 
+    }, []);
 
 
     return (
@@ -39,6 +40,8 @@ const VisitGuide = () => {
             </TopImage>
 
             <Guidetab data={Guidedata} />
+
+            <Accessibility data={Guidedata} />
         </div>
     )
 }
