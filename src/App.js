@@ -10,6 +10,7 @@ import CollectionDetails from "./components/SearchResult/CollectionDetails";
 import Visit from "./pages/Visit/Visit";
 import VisitGuide from "./pages/VisitGuide/VisitGuide";
 import endPoints, { httpData } from "./store/Alldata";
+import Museum from "./pages/Museum/Museum";
 
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
         <Route path="search-result/:id" element={<CollectionDetails />} />
         <Route path="visit" element={<Visit />} />
         <Route path="visit-Guide" element={<VisitGuide />} />
+        <Route path="museum" element={<Museum />} />
 
 
 
