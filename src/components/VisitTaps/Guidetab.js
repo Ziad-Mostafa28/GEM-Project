@@ -10,8 +10,8 @@ const Guidetab = ({ data }) => {
     }
     return (
         <>
-            <div class={`navbar-collapse d-block ${style.collapse}`} id="bs-example-navbar-collapse-1">
-                <ul class={`${style.taps}`}>
+            <div className={`navbar-collapse d-block ${style.collapse}`} id="bs-example-navbar-collapse-1">
+                <ul className={`${style.taps}`}>
                     <li><a href="#mu-Getting-Here-Parking">Getting Here & Parking</a></li>
                     <li><a href="#mu-Gem-Map">Gem Map</a></li>
                     <li><a href="#mu-Health-And-Safety">Health And Safety</a></li>
@@ -160,7 +160,7 @@ const Guidetab = ({ data }) => {
                 <Group data={data} />
             </section>
 
-            
+
         </>
     )
 }

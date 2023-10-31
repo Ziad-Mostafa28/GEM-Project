@@ -1,10 +1,10 @@
 import React from 'react'
 import style from './visittap.module.css'
-const Visittaps = (data) => { 
+const Visittaps = (data) => {
     return (
         <>
-            <div class={`navbar-collapse d-block ${style.collapse}`} id="bs-example-navbar-collapse-1">
-                <ul class={`${style.taps}`}>
+            <div className={`navbar-collapse d-block ${style.collapse}`} id="bs-example-navbar-collapse-1">
+                <ul className={`${style.taps}`}>
                     <li><a href="#mu-open-hour">Opening Hours</a></li>
                     <li><a href="#mu-buy-tickets">Tickets</a></li>
                     <li><a href="#mu-author">Visitor Guide</a></li>
