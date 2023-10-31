@@ -160,6 +160,7 @@ const Guidetab = ({ data }) => {
                 <Group data={data} />
             </section>
 
+            
         </>
     )
 }
