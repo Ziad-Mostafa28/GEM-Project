@@ -16,5 +16,6 @@ export const httpData = instance
 const endPoints = {
     home: 'home',
     visit: 'visit',
+    museum: 'museum/museum-page',
 }
 export default endPoints
