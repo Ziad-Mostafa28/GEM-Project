@@ -72,7 +72,7 @@ const Header = () => {
                                     </ul>
                                 </li>
                                 <li className={`${classes.middle_li}`}>
-                                    <a className={`${classes.bottom_li}`} href='/'>
+                                    <a className={`${classes.bottom_li}`} href='museum'>
                                         museum
                                     </a>
                                     <ul className={`${classes.DropsDown}`}>
