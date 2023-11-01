@@ -4,10 +4,13 @@ import SearchBar from '../../SearchBar/SearchBar'
 
 const Header = () => {
 
+    const lang = localStorage.getItem('language')
+
     const handleClick = (language) => {
         localStorage.setItem('language', language)
         window.location.reload();
     }
+
     return (
         <header>
             <nav className='p-0 navbar navbar navbar-expand-lg navbar-light'>
@@ -51,7 +54,7 @@ const Header = () => {
                             <ul className={`list-unstyled ${classes.bottom_ULL}`}>
                                 <li className={`${classes.middle_li}`}>
                                     <a className={`${classes.bottom_li}`} href='visit'>
-                                        Visit
+                                        {lang === 'en' ? 'Visit' : "الزيارة"}
                                     </a>
                                     <ul className={`${classes.DropsDown}`}>
                                         <li className={`${classes.DropsDown_li}`}>
