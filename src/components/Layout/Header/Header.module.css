@@ -118,10 +118,10 @@ transform-origin: right;
 
 
 @media (min-width:320px) and (max-width: 768px)  {
-    .navsBar {
-            /* display: flex !important;
-            flex-direction: row; */
-    }
+    /* .navsBar {
+             display: flex !important;
+            flex-direction: row; 
+    } */
 
     .stylenavebar_nav{
         display: flex;
@@ -168,6 +168,9 @@ header {
     position:relative;
     max-width:100%
 }
+.navsBar {
+    flex-direction: row-reverse;
+}
 
 .First_ULLL {
     display: flex;
@@ -177,7 +180,7 @@ header {
     margin-bottom: 0.75rem;
 }
 .stylenavebar_nav {
-    margin-left: auto;
+    /* margin-left: auto; */
     /* d-flex flex-column flex-wrap   */
     display: flex;
     flex-direction: column;
@@ -301,6 +304,9 @@ header {
     z-index: 202;
     font-family: "Greta Sans Std";
 }
+.bottom_li a {
+    padding: 0;
+}   
 .DropsDown {
     position: absolute;
     left: -15px;
