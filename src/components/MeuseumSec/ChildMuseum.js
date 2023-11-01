@@ -36,7 +36,7 @@ const ChildMuseum = ({ data }) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='right col-lg-6 col-sm-12'>
+                            <div className={`right col-lg-6 col-sm-12 ${style.right_Box}`} >
                                 <div className={`${style.right_gap}`}>
 
                                     <div key={data.id} className='position-relative overflow-hidden'>
