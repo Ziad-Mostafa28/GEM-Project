@@ -4,6 +4,7 @@ import TopImage from '../../components/wrapper/TopImage';
 import MuseumTabs from '../../components/MeuseumSec/MuseumTabs';
 import SwipMuseum from '../../components/MeuseumSec/SwipMuseum';
 import ChildMuseum from '../../components/MeuseumSec/ChildMuseum';
+import Conservation from '../../components/MeuseumSec/Conservation';
 
 
 const Museum = (data) => {
@@ -46,6 +47,7 @@ const Museum = (data) => {
             </section>
 
             <ChildMuseum data={museumdata} />
+            <Conservation data={museumdata} />
         </div>
     )
 
