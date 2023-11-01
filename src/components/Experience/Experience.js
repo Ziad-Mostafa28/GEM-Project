@@ -20,7 +20,6 @@ const Experience = () => {
                     <div className='Left col-lg-6 col-sm-12'>
                         <div className='overflow-hidden'>
                             <div key={experiences_left?.id} className={`position-relative `}>
-                                {/* <img className='w-100' src={experiences_left.image}/> */}
                                 <img className={`w-100 ${styles.left_img} ${styles.div_image}`} src={experiences_left?.image} alt="experiencess" />
                                 <div className={`position-absolute bottom-0 left-0 ${styles.Right_IMAge}`} >
                                     <h3 className={`fs-5 ${styles.TEXT_h3}`}>{experiences_left?.title}</h3>
