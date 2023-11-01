@@ -76,10 +76,10 @@
 
 
 .Caption {
-    right: auto!important;
+    /* right: auto!important; */
     /* bottom: auto !important; */
+    /* left: 8% !important; */
     top: 33% ;
-    left: 8% !important;
     text-align: start !important;
 }
 .home_banner {
