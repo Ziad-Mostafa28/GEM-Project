@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import endPoints, { httpData } from '../../store/Alldata';
 import TopImage from '../../components/wrapper/TopImage';
 import Gemtaps from '../../components/Gem/Gemtaps';
+import PlaySec from '../../components/Gem/PlaySec';
 
 const Gem = () => {
 
@@ -37,6 +38,8 @@ const Gem = () => {
             </TopImage>
 
             <Gemtaps data={gemdata} />
+
+            <PlaySec data={gemdata} />
         </div>
     )
 }
