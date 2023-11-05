@@ -4,7 +4,7 @@ import style from './LearnSec.module.css'
 const LearnSec = ({ data }) => {
 
     return (
-        <section className={`${style.learn}`}>
+        <section className={`${style.learn}`} id="mu-learn">
             <div className='container'>
                 <h3 className={`${style.title_h}`}>
                     {data?.learn_title}
@@ -31,7 +31,7 @@ const LearnSec = ({ data }) => {
                                     <p className={`${style.learn_card_body_text}`}>
                                         {data?.description}
                                     </p>
-                                    <p className={`${style.learn_link}`}> 
+                                    <p className={`${style.learn_link}`}>
                                         <span>Discover More</span>
                                     </p>
                                 </div>
