@@ -17,5 +17,6 @@ const endPoints = {
     home: 'home',
     visit: 'visit',
     museum: 'museum/museum-page',
+    experience: 'experience'
 }
 export default endPoints
