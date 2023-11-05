@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './Gemtaps.module.css'
+import ShopSec from './ShopSec'
 
 
 const Gemtaps = ({ data }) => {
@@ -57,7 +58,7 @@ const Gemtaps = ({ data }) => {
             </section>
 
             <section className={`${style.Shop}`} id="mu-shop">
-            
+                <ShopSec data={data} />
             </section>
         </>
     )
