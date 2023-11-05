@@ -40,11 +40,11 @@ const Gem = () => {
                 </div>
             </TopImage>
 
-            <Gemtaps data={gemdata} />
+            {<Gemtaps data={gemdata} />}
 
-            <PlaySec data={gemdata} />
+            {<PlaySec data={gemdata} />}
 
-            <LearnSec data={gemdata} />
+            {<LearnSec data={gemdata} />}
 
             <WorkSec data={gemdata} />
         </div>
