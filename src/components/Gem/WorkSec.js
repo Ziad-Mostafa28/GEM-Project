@@ -4,7 +4,7 @@ const WorkSec = ({ data }) => {
 
     return (
 
-        <section className={`${style.work}`}>
+        <section className={`${style.work}`} id="mu-work" >
             <div className='container'>
                 <h3 className={`${style.title_h}`}>
                     {data?.work_title}
