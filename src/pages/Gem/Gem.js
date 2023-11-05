@@ -4,6 +4,7 @@ import TopImage from '../../components/wrapper/TopImage';
 import Gemtaps from '../../components/Gem/Gemtaps';
 import PlaySec from '../../components/Gem/PlaySec';
 import LearnSec from '../../components/Gem/LearnSec';
+import WorkSec from '../../components/Gem/WorkSec';
 
 
 const Gem = () => {
@@ -44,6 +45,8 @@ const Gem = () => {
             <PlaySec data={gemdata} />
 
             <LearnSec data={gemdata} />
+
+            <WorkSec data={gemdata} />
         </div>
     )
 }
