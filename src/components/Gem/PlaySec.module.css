@@ -1,0 +1,100 @@
+.Play {
+    padding: 30px 0;
+    margin-top: 100px;
+}
+
+
+.title_h {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #4d4033;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    
+}
+.text_p {
+    font-weight: 400;
+    color: rgba(77,64,51,.7);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.Big_Card {
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.play_card {
+    border-radius: 0 0 5px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.play_content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 2;
+    padding: 15px 30px
+}
+.play_content::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+    background: #000;
+    background: linear-gradient(180deg,transparent,rgba(0,0,0,.8));
+    z-index: -1;
+}
+.Play_H4 {
+    font-weight: 700;
+    color: #e35a00;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.Play_P {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.play_span {
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    max-width: 100%;
+}
+
+.play_image {
+    display: block;
+    max-width: 100%;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    transition: transform 0.5s;
+}
+
+.playLink:hover .play_image {
+    transform: scale(1.1);
+    
+}
