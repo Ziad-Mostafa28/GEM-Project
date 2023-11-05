@@ -97,7 +97,7 @@ const Header = () => {
                                     </ul>
                                 </li>
                                 <li className={`${classes.middle_li}`}>
-                                    <a className={`${classes.bottom_li}`} href='/'>
+                                    <a className={`${classes.bottom_li}`} href='experience'>
                                         GEM Experience
                                     </a>
                                     <ul className={`${classes.DropsDown}`}>
