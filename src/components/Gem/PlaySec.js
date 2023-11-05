@@ -4,7 +4,7 @@ import style from './PlaySec.module.css'
 const PlaySec = ({ data }) => {
 
     return (
-        <section className={`${style.Play}`}>
+        <section className={`${style.Play}`} id="mu-play">
 
             <div className='container'>
 
