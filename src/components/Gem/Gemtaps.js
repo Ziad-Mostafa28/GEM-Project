@@ -28,12 +28,37 @@ const Gemtaps = ({ data }) => {
                             {data?.dine_description}
                         </p>
                     </div>
+
+                    <div className={`${style.all_data_Card}`}>
+                        <div className={`${style.left_data}`}>
+                            <div className={`${style.content_Card}`}>
+                                <h3 className={`${style.content_title}`}>
+                                    {data?.dine_card_title}
+                                </h3>
+                                <p className={`${style.content_text}`}>
+                                    {data?.dine_card_description}
+                                </p>
+                                <a className={`${style.left_data_link}`}>
+                                    <span>
+                                        Discover More
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div className={`${style.right_data}`}>
+                            <span className={`w-100 h-100 ${style.right_data_span}`}>
+                                <img className={`object-fit-cover w-100 ${style.right_data_img}`} src={data?.dine_image} />
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
 
             </section>
 
+            <section className={`${style.Shop}`} id="mu-shop">
             
+            </section>
         </>
     )
 }
