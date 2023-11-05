@@ -1,0 +1,96 @@
+.learn {
+    padding: 30px 0;
+    margin-top: 100px;
+}
+
+
+.title_h {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #4d4033;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    
+}
+.text_p {
+    font-weight: 400;
+    color: rgba(77,64,51,.7);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.Learn_card {
+    box-shadow: 0 32px 64px rgba(0,0,0,.06);
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+.Learn_image {
+    overflow: hidden;
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    margin-bottom: 0.75rem;
+}
+.learn_span {
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    max-width: 100%;
+}
+.learn_imagess {
+    display: block;
+    max-width: 100%;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    transition: transform 0.5s;
+}
+
+.Learn_body {
+    padding: 1rem 2rem;
+    opacity: 1;
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+.Learn_H4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e35a00;
+    height: 40px;
+}
+.learn_card_body_text {
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    font-weight: 400;
+    color: rgba(77,64,51,.7);
+}
+.learn_link {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    color: rgba(77,64,51,.7);
+    gap: 0.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all .3s ease-in-out;
+}
