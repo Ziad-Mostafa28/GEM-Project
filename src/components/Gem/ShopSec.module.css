@@ -1,0 +1,85 @@
+.image {
+    background-image: url('https://uat-iconcreations.com/2022/gem/public/uploads/experiences-page/202301230938Shop-inside-Experience-Banner.jpg');
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    height: 90vh;
+}
+
+.image::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+}
+
+.shop_content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.shop_content_title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: start;
+    margin-bottom: 1.5rem;
+    width: 60%;
+}
+
+.shop_content_text{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.Shop_link {
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+    padding: 8px 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    border: 1px solid white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    text-decoration: none;
+}
+.Shop_link::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: 2;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    background-color: #fff;
+}
+.Shop_link:hover  {
+    background-color: white;
+    transition: 0.5s;
+}
+
+.Shop_link:hover span {
+    color: #e35a00;
+}
