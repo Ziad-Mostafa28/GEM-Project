@@ -13,17 +13,32 @@ const WorkSec = ({ data }) => {
                     {data?.work_description}
                 </p>
             </div>
-            <div>
+            <div className='overflow-hidden'>
                 <div className='row'>
                     {data?.work_list && data?.work_list.map((data) =>
                         <div key={data?.id} className='col-md-6'>
                             <div className={`${style.transformBox}`}>
                                 <div className={`${style.transformBox_img}`}>
-                                    <div className='img-block img-full h-100 '>
-                                        <span className={`w-100 h-100 ${style.work_span}`}>
-                                            <img className={` w-100 h-100${style.work_image}`} src={data?.image} />
-                                        </span>
+                                    <div className='h-100 '>
+
+
+                                        <div className='img-block img-full'>
+                                            <span className={`w-100 h-100 ${style.work_span}`}>
+                                                <img className={` w-100 h-100${style.work_image}`} src={data?.image} />
+                                            </span>
+                                        </div>
                                     </div>
+                                </div>
+                                <div className={`${style.transformBox_content}`}>
+                                    <h4 className={`${style.transformBox_content_title2}`}>
+                                        {data?.title}
+                                    </h4>
+                                    <p className={`${style.transformBox_content_text}`}>
+                                        {data?.description}
+                                    </p>
+                                    <a className={`${style.Work_Link}`} href='/'>
+                                        <span>{data?.learn_more}</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
