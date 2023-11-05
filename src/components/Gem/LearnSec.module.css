@@ -77,6 +77,9 @@
     color: #e35a00;
     height: 40px;
 }
+.Learn_H4:hover span{
+    color: #e35a00;
+}
 .learn_card_body_text {
     margin-bottom: 1rem;
     font-size: .9rem;
