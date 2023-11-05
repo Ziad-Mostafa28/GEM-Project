@@ -3,6 +3,8 @@ import endPoints, { httpData } from '../../store/Alldata';
 import TopImage from '../../components/wrapper/TopImage';
 import Gemtaps from '../../components/Gem/Gemtaps';
 import PlaySec from '../../components/Gem/PlaySec';
+import LearnSec from '../../components/Gem/LearnSec';
+
 
 const Gem = () => {
 
@@ -40,6 +42,8 @@ const Gem = () => {
             <Gemtaps data={gemdata} />
 
             <PlaySec data={gemdata} />
+
+            <LearnSec data={gemdata} />
         </div>
     )
 }
