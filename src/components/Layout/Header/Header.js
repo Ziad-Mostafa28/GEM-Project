@@ -129,7 +129,7 @@ const Header = () => {
                                     </ul>
                                 </li>
                                 <li className={`${classes.middle_li}`}>
-                                    <a className={`${classes.bottom_li}`} href='/'>
+                                    <a className={`${classes.bottom_li}`} href='whats'>
                                         What's on
                                     </a>
                                 </li>
