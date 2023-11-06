@@ -1,0 +1,35 @@
+.Search_searchBar {
+    -webkit-backdrop-filter: blur(10px) brightness(50%);
+    backdrop-filter: blur(10px) brightness(50%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+    padding: 2rem 0;
+}
+.spsp:hover {
+    color: white !important;
+}
+.search_searchBar_links {
+    display: flex;
+    gap: 15px;
+}
+
+.search_searchBar_links_linkk {
+    cursor: pointer;
+    color: #fff !important;
+
+    position: relative;
+    font-weight: 700;
+    font-size: 1.2rem !important;
+}
+
+.aaa {
+    text-decoration: none;
+    opacity: 100% !important;
+}
+
+.aaa:hover {
+    border-bottom: 4px solid white;
+    transition: 0.0s;
+}
