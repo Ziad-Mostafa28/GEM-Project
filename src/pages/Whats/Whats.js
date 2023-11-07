@@ -3,6 +3,7 @@ import endPoints, { httpData } from '../../store/Alldata';
 import TopImage from '../../components/wrapper/TopImage';
 import style from './Whats.module.css'
 import Loader from '../../components/wrapper/Loader';
+import WhatsAll from '../../components/WhatsData/WhatsAll';
 
 const Whats = () => {
 
@@ -76,82 +77,35 @@ const Whats = () => {
                 <div className='container'>
                     <div className="tab-content" id="nav-tabContent">
                         <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-
                             <nav>
-                                <div className="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <button className="nav-link active" id="nav-All-tab" data-bs-toggle="tab" data-bs-target="#nav-All" type="button" role="tab" aria-controls="nav-All" aria-selected="true">All</button>
-                                    <button className="nav-link" id="nav-Events-tab" data-bs-toggle="tab" data-bs-target="#nav-Events" type="button" role="tab" aria-controls="nav-Events" aria-selected="false" onClick={() => changeEvents(1)}>Events</button>
-                                    <button className="nav-link" id="nav-Conferences-tab" data-bs-toggle="tab" data-bs-target="#nav-Conferences" type="button" role="tab" aria-controls="nav-Conferences" aria-selected="false" onClick={() => changeEvents(2)}>Conferences</button>
-                                    <button className="nav-link" id="nav-Cultural-Programs-tab" data-bs-toggle="tab" data-bs-target="#nav-Cultural-Programs" type="button" role="tab" aria-controls="nav-Cultural-Programs" aria-selected="false" Cultural-Programs onClick={() => changeEvents(3)}>Cultural-Programs</button>
+                                <div className={`nav nav-tabs ${style.taps_style}`} id="nav-tab" role="tablist">
+                                    <button className={`nav-link active ${style.taps_tap}`} id="nav-All-tab" data-bs-toggle="tab" data-bs-target="#nav-All" type="button" role="tab" aria-controls="nav-All" aria-selected="true">All</button>
+                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Events-tab" data-bs-toggle="tab" data-bs-target="#nav-Events" type="button" role="tab" aria-controls="nav-Events" aria-selected="false" onClick={() => changeEvents(1)}>Events</button>
+                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Conferences-tab" data-bs-toggle="tab" data-bs-target="#nav-Conferences" type="button" role="tab" aria-controls="nav-Conferences" aria-selected="false" onClick={() => changeEvents(2)}>Conferences</button>
+                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Cultural-Programs-tab" data-bs-toggle="tab" data-bs-target="#nav-Cultural-Programs" type="button" role="tab" aria-controls="nav-Cultural-Programs" aria-selected="false" Cultural-Programs onClick={() => changeEvents(3)}>Cultural-Programs</button>
+                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Exhibitions-tab" data-bs-toggle="tab" data-bs-target="#nav-Exhibitions" type="button" role="tab" aria-controls="nav-Exhibitions" aria-selected="false" Exhibitions onClick={() => changeEvents(4)}>Exhibitions</button>
                                 </div>
                             </nav>
-                            <div className="tab-content" id="nav-tabContent">
+                            <div className="tab-content mt-5" id="nav-tabContent">
                                 <div className="tab-pane fade show active" id="nav-All" role="tabpanel" aria-labelledby="nav-All-tab" tabindex="0">
-                                    {loader ? <Loader /> : <div className='row'>
-                                            <div className='mb-4 col-lg-4 col-md-6'>
-                                                {currentdata?.events && currentdata?.events.map((data) =>
-                                                    <div key={data.id} className={`${style.whatson_card}`}>
-                                                        <div className='img-block zoomIn h-100 undefined'>
-                                                            <span className={`d-flex h-100 ${style.First_Bottom_Span}`}>
-                                                                <img key={data.id} src={data.thumbnail} className={`img-block zoomIn h-100 w-100 undefined`} />
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    }
+                                    {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
                                 </div>
                                 <div class="tab-pane fade" id="nav-Events" role="tabpanel" aria-labelledby="nav-Events-tab" tabindex="0">
-                                    {loader ? <Loader /> : <div className='row'>
-                                            <div className='mb-4 col-lg-4 col-md-6'>
-                                                {currentdata?.events && currentdata?.events.map((data) =>
-                                                    <div key={data.id} className={`${style.whatson_card}`}>
-                                                        <div className='img-block zoomIn h-100 undefined'>
-                                                            <span className={`d-flex h-100 ${style.First_Bottom_Span}`}>
-                                                                <img key={data.id} src={data.thumbnail} className={`img-block zoomIn h-100 w-100 undefined`} />
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    }
+                                    {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
                                 </div>
                                 <div class="tab-pane fade" id="nav-Conferences" role="tabpanel" aria-labelledby="nav-Conferences-tab" tabindex="0">
-                                    {loader ? <Loader /> : <div className='row'>
-                                            <div className='mb-4 col-lg-4 col-md-6'>
-                                                {currentdata?.events && currentdata?.events.map((data) =>
-                                                    <div key={data.id} className={`${style.whatson_card}`}>
-                                                        <div className='img-block zoomIn h-100 undefined'>
-                                                            <span className={`d-flex h-100 ${style.First_Bottom_Span}`}>
-                                                                <img key={data.id} src={data.thumbnail} className={`img-block zoomIn h-100 w-100 undefined`} />
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    }
+                                    {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
                                 </div>
                                 <div class="tab-pane fade" id="nav-Cultural-Programs" role="tabpanel" aria-labelledby="nav-Cultural-Programs-tab" tabindex="0">
-                                    {loader ? <Loader /> : <div className='row'>
-                                            <div className='mb-4 col-lg-4 col-md-6'>
-                                                {currentdata?.events && currentdata?.events.map((data) =>
-                                                    <div key={data.id} className={`${style.whatson_card}`}>
-                                                        <div className='img-block zoomIn h-100 undefined'>
-                                                            <span className={`d-flex h-100 ${style.First_Bottom_Span}`}>
-                                                                <img key={data.id} src={data.thumbnail} className={`img-block zoomIn h-100 w-100 undefined`} />
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    }
+                                    {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
+                                </div>
+                                <div class="tab-pane fade" id="nav-Exhibitions" role="tabpanel" aria-labelledby="nav-Exhibitions-tab" tabindex="0">
+                                    {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
                     </div>
                 </div>
