@@ -12,7 +12,7 @@ const WhatsAll = ({ data }) => {
                         <div key={data.id} className={`${style.whatson_card}`}>
                             <div className='img-block zoomIn h-100 undefined'>
                                 <span className={`d-flex h-100 ${style.First_Bottom_Span}`}>
-                                    <img key={data.id} src={data.thumbnail} className={`img-block zoomIn h-100 w-100 undefined`} />
+                                    <img key={data.id} src={data.thumbnail} className={`img-block zoomIn h-100 w-100 undefined ${style.span_image}`} />
                                 </span>
                             </div>
                         </div>
