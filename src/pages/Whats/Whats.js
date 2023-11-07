@@ -12,8 +12,11 @@ const Whats = () => {
     const [currentdata, setcurrentdata] = useState([]);
     const [loader, setLoader] = useState(true);
 
-    const changeEvents = (tab) => {
+    const [flagTab, setFlagTab] = useState("");
+
+    const changeEvents = (tab, flagTab) => {
         setEvents(tab)
+        setFlagTab(flagTab)
     }
     useEffect(() => {
         async function getwhatsData() {
@@ -79,29 +82,26 @@ const Whats = () => {
                         <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
                             <nav>
                                 <div className={`nav nav-tabs ${style.taps_style}`} id="nav-tab" role="tablist">
-                                    <button className={`nav-link active ${style.taps_tap}`} id="nav-All-tab" data-bs-toggle="tab" data-bs-target="#nav-All" type="button" role="tab" aria-controls="nav-All" aria-selected="true">All</button>
-                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Events-tab" data-bs-toggle="tab" data-bs-target="#nav-Events" type="button" role="tab" aria-controls="nav-Events" aria-selected="false" onClick={() => changeEvents(1)}>Events</button>
-                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Conferences-tab" data-bs-toggle="tab" data-bs-target="#nav-Conferences" type="button" role="tab" aria-controls="nav-Conferences" aria-selected="false" onClick={() => changeEvents(2)}>Conferences</button>
-                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Cultural-Programs-tab" data-bs-toggle="tab" data-bs-target="#nav-Cultural-Programs" type="button" role="tab" aria-controls="nav-Cultural-Programs" aria-selected="false" Cultural-Programs onClick={() => changeEvents(3)}>Cultural-Programs</button>
-                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Exhibitions-tab" data-bs-toggle="tab" data-bs-target="#nav-Exhibitions" type="button" role="tab" aria-controls="nav-Exhibitions" aria-selected="false" Exhibitions onClick={() => changeEvents(4)}>Exhibitions</button>
+                                    <button className={`nav-link active ${style.taps_tap}`} id="nav-All-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#nav-All"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="nav-All" aria-selected="true">All</button>
+                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Events-tab" data-bs-toggle="tab" data-bs-target="#nav-Events" type="button" role="tab" aria-controls="nav-Events" aria-selected="false" onClick={() => changeEvents(1, "nav-Events-tab")}>Events</button>
+                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Conferences-tab" data-bs-toggle="tab" data-bs-target="#nav-Conferences" type="button" role="tab" aria-controls="nav-Conferences" aria-selected="false" onClick={() => changeEvents(2, "nav-Conferences-tab")}>Conferences</button>
+                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Cultural-Programs-tab" data-bs-toggle="tab" data-bs-target="#nav-Cultural-Programs" type="button" role="tab" aria-controls="nav-Cultural-Programs" aria-selected="false" Cultural-Programs onClick={() => changeEvents(3, "nav-Cultural-Programs-tab")}>Cultural-Programs</button>
+                                    <button className={`nav-link ${style.taps_tap}`} id="nav-Exhibitions-tab" data-bs-toggle="tab" data-bs-target="#nav-Exhibitions" type="button" role="tab" aria-controls="nav-Exhibitions" aria-selected="false" Exhibitions onClick={() => changeEvents(4, "nav-Exhibitions-tab")}>Exhibitions</button>
                                 </div>
                             </nav>
                             <div className="tab-content mt-5" id="nav-tabContent">
                                 <div className="tab-pane fade show active" id="nav-All" role="tabpanel" aria-labelledby="nav-All-tab" tabindex="0">
                                     {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
                                 </div>
-                                <div class="tab-pane fade" id="nav-Events" role="tabpanel" aria-labelledby="nav-Events-tab" tabindex="0">
+                                <div class="tab-pane fade" id="nav-Events" role="tabpanel" aria-labelledby={flagTab} tabindex="0" >
                                     {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
                                 </div>
-                                <div class="tab-pane fade" id="nav-Conferences" role="tabpanel" aria-labelledby="nav-Conferences-tab" tabindex="0">
-                                    {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
-                                </div>
-                                <div class="tab-pane fade" id="nav-Cultural-Programs" role="tabpanel" aria-labelledby="nav-Cultural-Programs-tab" tabindex="0">
-                                    {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
-                                </div>
-                                <div class="tab-pane fade" id="nav-Exhibitions" role="tabpanel" aria-labelledby="nav-Exhibitions-tab" tabindex="0">
-                                    {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
-                                </div>
+
                             </div>
                         </div>
 
