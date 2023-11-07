@@ -37,12 +37,6 @@
     margin-top: 100px;
 }
 
-.whatson_card {
-    border-radius: 10px;
-    box-shadow: 0 32px 64px rgba(0, 0, 0, .06);
-    height: 100%;
-}
-
 .taps_style {
     display: flex;
     justify-content: space-around;
@@ -51,4 +45,5 @@
 .taps_tap {
     font-size: 1.3rem !important;
     color: #4d4033 !important;
+    font-weight: bold !important;
 }

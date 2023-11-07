@@ -18,3 +18,16 @@
     position: relative;
     max-width: 100%;
 }
+
+.span_image {
+    display: block;
+    max-width: 100%;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px 10px 0 0 !important;
+}
