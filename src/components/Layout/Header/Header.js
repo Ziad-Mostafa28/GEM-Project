@@ -80,7 +80,7 @@ const Header = () => {
                                     </a>
                                     <ul className={`${classes.DropsDown}`}>
                                         <li className={`${classes.DropsDown_li}`}>
-                                            <a className={`${classes.bottom_link_a}`} href='/'>
+                                            <a className={`${classes.bottom_link_a}`} href='musecollection'>
                                                 Collections
                                             </a>
                                         </li>
