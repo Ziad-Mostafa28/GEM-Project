@@ -8,7 +8,7 @@ import WhatsAll from '../../components/WhatsData/WhatsAll';
 const Whats = () => {
 
     const [whatsdata, setwhatsdata] = useState([]);
-    const [events, setEvents] = useState();
+    const [events, setEvents] = useState("");
     const [currentdata, setcurrentdata] = useState([]);
     const [loader, setLoader] = useState(true);
 
@@ -79,7 +79,7 @@ const Whats = () => {
             <section className={`${style.seconed_section}`}>
                 <div className='container'>
                     <div className="tab-content" id="nav-tabContent">
-                        <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabIndex="0">
                             <nav>
                                 <div className={`nav nav-tabs ${style.taps_style}`} id="nav-tab" role="tablist">
                                     <button className={`nav-link active ${style.taps_tap}`} id="nav-All-tab"
@@ -87,7 +87,8 @@ const Whats = () => {
                                         data-bs-target="#nav-All"
                                         type="button"
                                         role="tab"
-                                        aria-controls="nav-All" aria-selected="true">All</button>
+                                        aria-controls="nav-All" aria-selected="true"
+                                        onClick={() => changeEvents("", "nav-All-tab")}>All</button>
                                     <button className={`nav-link ${style.taps_tap}`} id="nav-Events-tab" data-bs-toggle="tab" data-bs-target="#nav-Events" type="button" role="tab" aria-controls="nav-Events" aria-selected="false" onClick={() => changeEvents(1, "nav-Events-tab")}>Events</button>
                                     <button className={`nav-link ${style.taps_tap}`} id="nav-Conferences-tab" data-bs-toggle="tab" data-bs-target="#nav-Conferences" type="button" role="tab" aria-controls="nav-Conferences" aria-selected="false" onClick={() => changeEvents(2, "nav-Conferences-tab")}>Conferences</button>
                                     <button className={`nav-link ${style.taps_tap}`} id="nav-Cultural-Programs-tab" data-bs-toggle="tab" data-bs-target="#nav-Cultural-Programs" type="button" role="tab" aria-controls="nav-Cultural-Programs" aria-selected="false" Cultural-Programs onClick={() => changeEvents(3, "nav-Cultural-Programs-tab")}>Cultural-Programs</button>
@@ -95,10 +96,10 @@ const Whats = () => {
                                 </div>
                             </nav>
                             <div className="tab-content mt-5" id="nav-tabContent">
-                                <div className="tab-pane fade show active" id="nav-All" role="tabpanel" aria-labelledby="nav-All-tab" tabindex="0">
+                                <div className="tab-pane fade show active" id="nav-All" role="tabpanel" aria-labelledby="nav-All-tab" tabIndex="0">
                                     {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
                                 </div>
-                                <div class="tab-pane fade" id="nav-Events" role="tabpanel" aria-labelledby={flagTab} tabindex="0" >
+                                <div className="tab-pane fade" id="nav-Events" role="tabpanel" aria-labelledby={flagTab} tabIndex="0" >
                                     {loader ? <Loader /> : <WhatsAll data={currentdata?.events} />}
                                 </div>
 
@@ -106,7 +107,7 @@ const Whats = () => {
                         </div>
 
 
-                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
+                        <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabIndex="0">...</div>
                     </div>
                 </div>
             </section>

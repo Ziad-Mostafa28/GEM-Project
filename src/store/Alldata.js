@@ -20,5 +20,7 @@ const endPoints = {
     experience: 'experience',
     whats: 'whats-on/whats-on-page',
     Current: 'whats-on/list?filter=current',
+    Upcoming: 'whats-on/list?filter=upcoming',
+    museumCollection: '/museum/collections-page',
 }
 export default endPoints
