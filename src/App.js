@@ -13,6 +13,7 @@ import endPoints, { httpData } from "./store/Alldata";
 import Museum from "./pages/Museum/Museum";
 import Gem from "./pages/Gem/Gem";
 import Whats from "./pages/Whats/Whats";
+import MuseCollection from "./pages/MuseumCollection/MuseCollection";
 
 
 const App = () => {
@@ -49,6 +50,7 @@ const App = () => {
         <Route path="museum" element={<Museum />} />
         <Route path="experience" element={<Gem />} />
         <Route path="whats" element={<Whats />} />
+        <Route path="musecollection" element={<MuseCollection />} />
 
 
 
