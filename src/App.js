@@ -14,6 +14,7 @@ import Museum from "./pages/Museum/Museum";
 import Gem from "./pages/Gem/Gem";
 import Whats from "./pages/Whats/Whats";
 import MuseCollection from "./pages/MuseumCollection/MuseCollection";
+import ResultMuseum from "./pages/MuseumCollection/ResultMuseum";
 
 
 const App = () => {
@@ -51,6 +52,7 @@ const App = () => {
         <Route path="experience" element={<Gem />} />
         <Route path="whats" element={<Whats />} />
         <Route path="musecollection" element={<MuseCollection />} />
+        <Route path="museumsearchResult" element={<ResultMuseum />} />
 
 
 
