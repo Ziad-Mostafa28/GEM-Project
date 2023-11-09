@@ -96,7 +96,7 @@
     font-family: "Greta Sans Std";
 }
 
-.div_image:hover {
+.div_image:hover div {
     transform: scale(1.1 );
     transition: 0.8s all;
 }
