@@ -1,0 +1,10 @@
+.Div_select {
+    background-color: rgba(0, 0, 0, .37);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0.65rem 0.5rem;
+    color: #fff;
+    opacity: .5;
+    font-weight: 400;
+}
