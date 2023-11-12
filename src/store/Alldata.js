@@ -22,5 +22,10 @@ const endPoints = {
     Current: 'whats-on/list?filter=current',
     Upcoming: 'whats-on/list?filter=upcoming',
     museumCollection: '/museum/collections-page',
+    Category: 'museum/collections/filters/categories',
+    Period: 'museum/collections/filters/periods',
+    Material: 'museum/collections/filters/material',
+    Provenance: 'museum/collections/filters/provenances',
+    Gallery: 'museum/collections/filters/gallery',
 }
 export default endPoints
