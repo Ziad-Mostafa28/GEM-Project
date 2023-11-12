@@ -1,6 +1,11 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
 import style from './ResultMuseum.module.css'
+import Category from '../../components/Filter/Category';
+import Period from '../../components/Filter/Period';
+import Material from '../../components/Filter/Material';
+import Provenance from '../../components/Filter/Provenance';
+import Gallery from '../../components/Filter/Gallery';
 
 
 
@@ -20,13 +25,61 @@ function ResultMuseum() {
                 </div>
 
 
-                <div>
-                    <div className='container'>
+                <div className={style.seconed_div}>
+                    <div className='h-100 container'>
+                        <h3 className={style.div_h3}>Collections Search</h3>
+                        <form>
+                            <div>
+                                <div className='row'>
+                                    <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
+                                        <div className='w-100'>
+                                            <label className={style.labells}>
+                                                Category
+                                            </label>
+                                            <Category />
+                                        </div>
+                                    </div>
+                                    <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
+                                        <div className='w-100'>
+                                            <label className={style.labells}>
+                                                Period
+                                            </label>
+                                            <Period />
+                                        </div>
+                                    </div>
+                                    <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
+                                        <div className='w-100'>
+                                            <label className={style.labells}>
+                                                Period
+                                            </label>
+                                            <Material />
+                                        </div>
+                                    </div>
+                                    <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
+                                        <div className='w-100'>
+                                            <label className={style.labells}>
+                                                Period
+                                            </label>
+                                            <Provenance />
+                                        </div>
+                                    </div>
+                                    <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
+                                        <div className='w-100'>
+                                            <label className={style.labells}>
+                                                Period
+                                            </label>
+                                            <Gallery />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
 
             </section>
+
 
             <section className={`mt-0 ${style.bottomSection}`}>
                 <div className='container'>

@@ -10,15 +10,55 @@
     position: relative;
 }
 
+.div_image::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 2;
+}
+
 .bann_image {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
+    object-position: right;
+}
+
+
+.seconed_div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.div_h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 5rem;
 }
 
 
 
 
+.labells {
+    color: #fff;
+    margin-bottom: 0.75rem;
+    width: 100%;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
 
 .bottomSection {
     padding: 30px 0;
