@@ -27,5 +27,6 @@ const endPoints = {
     Material: 'museum/collections/filters/material',
     Provenance: 'museum/collections/filters/provenances',
     Gallery: 'museum/collections/filters/gallery',
+    Theme: 'museum/collections/filters/theme',
 }
 export default endPoints
