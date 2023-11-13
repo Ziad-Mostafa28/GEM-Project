@@ -24,9 +24,9 @@ const endPoints = {
     museumCollection: '/museum/collections-page',
     Category: 'museum/collections/filters/categories',
     Period: 'museum/collections/filters/periods',
-    Material: 'museum/collections/filters/material',
+    Material: 'museum/collections/filters/materials',
     Provenance: 'museum/collections/filters/provenances',
-    Gallery: 'museum/collections/filters/gallery',
-    Theme: 'museum/collections/filters/theme',
+    Gallery: 'museum/collections/filters/galleries',
+    Theme: 'museum/collections/filters/themes',
 }
 export default endPoints
