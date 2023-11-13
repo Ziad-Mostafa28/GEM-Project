@@ -6,6 +6,7 @@ import Period from '../../components/Filter/Period';
 import Material from '../../components/Filter/Material';
 import Provenance from '../../components/Filter/Provenance';
 import Gallery from '../../components/Filter/Gallery';
+import Theme from '../../components/Filter/Theme';
 
 
 
@@ -50,7 +51,7 @@ function ResultMuseum() {
                                     <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
                                         <div className='w-100'>
                                             <label className={style.labells}>
-                                                Period
+                                                Material
                                             </label>
                                             <Material />
                                         </div>
@@ -58,7 +59,7 @@ function ResultMuseum() {
                                     <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
                                         <div className='w-100'>
                                             <label className={style.labells}>
-                                                Period
+                                                Provenance
                                             </label>
                                             <Provenance />
                                         </div>
@@ -66,9 +67,32 @@ function ResultMuseum() {
                                     <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
                                         <div className='w-100'>
                                             <label className={style.labells}>
-                                                Period
+                                                Gallery
                                             </label>
                                             <Gallery />
+                                        </div>
+                                    </div>
+                                    <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
+                                        <div className='w-100'>
+                                            <label className={style.labells}>
+                                                Theme
+                                            </label>
+                                            <Theme />
+                                        </div>
+                                    </div>
+                                    <div className='mb-sm-0 mb-4 col-md-8 col-sm-6'>
+                                        <div className='w-100'>
+                                            <input className={style.collection_search} type='text' id='keyword' placeholder='keyword' />
+                                        </div>
+                                    </div>
+                                    <div className='col-md-4 col-sm-6'>
+                                        <div className='d-flex h-100 justify-content-between'>
+                                            <button className={style.search_button} >
+                                                Search
+                                            </button>
+                                            <button className={style.clear_pointer}>
+                                                Clear
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
