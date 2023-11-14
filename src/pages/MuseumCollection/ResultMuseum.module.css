@@ -163,14 +163,14 @@
 }
 
 .collection_search {
-    opacity: 1;
+    /* opacity: 1; */
     border: 2px solid rgb(129, 129, 129);
     background-color: rgba(0, 0, 0, .37);
     border-radius: 5px;
     width: 100%;
     padding: 0.65rem 0.5rem;
     color: #fff;
-    opacity: .5;
+    /* opacity: .5; */
     font-weight: 400;
 }
 

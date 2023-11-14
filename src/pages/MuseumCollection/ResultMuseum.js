@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import style from './ResultMuseum.module.css'
 import Category from '../../components/Filter/Category';
@@ -10,12 +10,21 @@ import Theme from '../../components/Filter/Theme';
 
 
 
-function ResultMuseum() {
+const ResultMuseum = () => {
+
+    
 
     const location = useLocation();
     const data = location.state.data;
 
     console.log(data);
+
+    const myCallback = () => {
+
+    }
+
+
+
 
     return (
         <>
@@ -24,6 +33,7 @@ function ResultMuseum() {
                 <div className={style.div_image}>
                     <img src='/img/bg.png23.png' className={style.bann_image} />
                 </div>
+
 
 
                 <div className={style.seconed_div}>
