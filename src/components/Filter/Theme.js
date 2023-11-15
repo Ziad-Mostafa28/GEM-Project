@@ -19,7 +19,7 @@ function Theme() {
             <option selected >Select</option>
             {themedata && themedata.map((data) =>
 
-                <option value={data?.id}>
+                <option key={data?.id} value={data?.id}>
                     {data?.title}
                 </option>
             )}

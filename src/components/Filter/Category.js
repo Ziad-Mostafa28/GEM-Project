@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import endPoints, { httpData } from '../../store/Alldata';
 import style from './Category.module.css'
-function Category() {
+function Category({ categoryValue }) {
 
-    const [categorydata, setCategorydata] = useState([]);
+    const [categoryData, setCategoryData] = useState([]);
 
     useEffect(() => {
-        async function getcategorydata() {
+        async function getCategoryData() {
             const response = await httpData.get(endPoints.Category);
-            setCategorydata(response.data.data);
+            setCategoryData(response.data.data);
         }
-        getcategorydata();
+        getCategoryData();
     }, []);
     return (
 
-        <select className={style.Div_select}>
+        <select className={style.Div_select} onChange={(event) => categoryValue(event.target.value)}>
             <option selected >Select</option>
-            {categorydata && categorydata.map((data) =>
+            {categoryData && categoryData.map((data) =>
 
-                <option value={data?.id}>
+                <option key={data?.id} value={data?.id}>
                     {data?.title}
                 </option>
             )}

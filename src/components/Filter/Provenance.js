@@ -19,7 +19,7 @@ function Provenance() {
             <option selected >Select</option>
             {provenanceldata && provenanceldata.map((data) =>
 
-                <option value={data?.id}>
+                <option key={data?.id} value={data?.id}>
                     {data?.title}
                 </option>
             )}

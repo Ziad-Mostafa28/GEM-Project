@@ -18,7 +18,7 @@ function Period() {
             <option selected >Select</option>
             {perioddata && perioddata.map((data) =>
 
-                <option value={data?.id}>
+                <option key={data?.id} value={data?.id}>
                     {data?.title}
                 </option>
             )}
