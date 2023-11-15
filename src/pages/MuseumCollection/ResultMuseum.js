@@ -11,20 +11,13 @@ import Theme from '../../components/Filter/Theme';
 
 
 const ResultMuseum = () => {
-
-    
-
     const location = useLocation();
-    const data = location.state.data;
+    const data = location?.state?.data;
+    const [catValue, setCatValue] = useState()
 
-    console.log(data);
-
-    const myCallback = () => {
-
+    const categoryValue = (val) => {
+        setCatValue(val);
     }
-
-
-
 
     return (
         <>
@@ -47,7 +40,7 @@ const ResultMuseum = () => {
                                             <label className={style.labells}>
                                                 Category
                                             </label>
-                                            <Category />
+                                            <Category categoryValue={categoryValue} />
                                         </div>
                                     </div>
                                     <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
