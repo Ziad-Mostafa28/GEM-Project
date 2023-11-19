@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import endPoints, { httpData } from '../../store/Alldata';
 import style from './Period.module.css'
-function Period() {
+
+
+const Period = ({ periodValue }) => {
 
     const [perioddata, setPerioddata] = useState([]);
 
@@ -14,7 +16,7 @@ function Period() {
     }, []);
     return (
 
-        <select className={style.Div_select}>
+        <select className={style.Div_select} onChange={(event) => periodValue(event.target.value)} >
             <option selected >Select</option>
             {perioddata && perioddata.map((data) =>
 
