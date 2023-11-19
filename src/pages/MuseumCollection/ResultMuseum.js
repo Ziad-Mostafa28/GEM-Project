@@ -13,12 +13,71 @@ import Theme from '../../components/Filter/Theme';
 const ResultMuseum = () => {
     const location = useLocation();
     const data = location?.state?.data;
+
+    const [collectiondata, setCollectionData] = useState()
+
     const [catValue, setCatValue] = useState()
+    const [gallValue, setGallValue] = useState()
+    const [perValue, setPerValue] = useState()
+    const [matValue, setMatValue] = useState()
+    const [provValue, setProvValue] = useState()
+    const [themValue, setThemValue] = useState()
 
     const categoryValue = (val) => {
         setCatValue(val);
     }
+    const periodValue = (val) => {
+        setPerValue(val);
+    }
+    const galleryValue = (val) => {
+        setGallValue(val);
+    }
+    const materialValue = (val) => {
+        setMatValue(val);
+    }
+    const provenanceValue = (val) => {
+        setProvValue(val);
+    }
+    const ThemeValue = (val) => {
+        setThemValue(val);
+    }
 
+    const fetchData = async (e) => {
+        e.preventDefault()
+        return await fetch(`https://uat-iconcreations.com/2022/gem/public/api/web/museum/collections/filter?keyword=&category_id=${catValue ? `&category_id=${catValue}` : ''}
+        &period_id=${perValue ? `&period_id=${perValue}` : ''}
+        &material_id=${matValue ? `&material_id=${matValue}` : ''}
+        &provenance_id=${provValue ? `&provenance_id=${provValue}` : ''}
+        &gallery_id=${gallValue ? `&gallery_id=${gallValue}` : ''}
+        &theme_id=${themValue ? `&theme_id=${themValue}` : ''}`
+        )
+            .then((response) => response.json())
+            .then((data) => setCollectionData(data));
+    }
+
+    const slide = (artifact) => {
+        return (
+            <div className={`mb-4 col-md-4 ${style.card_style}`}>
+                <div className={` h-100 ${style.total_card}`}>
+                    <div className='img-block zoomIn h-100 undefined'>
+                        <span className={`d-flex h-100 ${style.First_Bottom_Span}`}>
+                            <img key={artifact.id} src={artifact.thumbnail} className={`img-block zoomIn h-100 w-100 undefined`} />
+                        </span>
+                    </div>
+                    <div className={` ${style.text_onCard}`}>
+                        <div className={`${style.Bottom_text}`}>
+                            <h6 className={`${style.Style_H6}`}>
+                                {artifact?.title}
+                            </h6>
+                            <a href={`/search-result/${artifact.id}`} className={`${style.New_Links}`}>
+                                See Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
     return (
         <>
             <section className={`${style.welcome}`}>
@@ -27,12 +86,10 @@ const ResultMuseum = () => {
                     <img src='/img/bg.png23.png' className={style.bann_image} />
                 </div>
 
-
-
                 <div className={style.seconed_div}>
                     <div className='h-100 container'>
                         <h3 className={style.div_h3}>Collections Search</h3>
-                        <form>
+                        <form onSubmit={fetchData}>
                             <div>
                                 <div className='row'>
                                     <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
@@ -48,7 +105,7 @@ const ResultMuseum = () => {
                                             <label className={style.labells}>
                                                 Period
                                             </label>
-                                            <Period />
+                                            <Period periodValue={periodValue} />
                                         </div>
                                     </div>
                                     <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
@@ -56,7 +113,7 @@ const ResultMuseum = () => {
                                             <label className={style.labells}>
                                                 Material
                                             </label>
-                                            <Material />
+                                            <Material materialValue={materialValue} />
                                         </div>
                                     </div>
                                     <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
@@ -64,7 +121,7 @@ const ResultMuseum = () => {
                                             <label className={style.labells}>
                                                 Provenance
                                             </label>
-                                            <Provenance />
+                                            <Provenance provenanceValue={provenanceValue} />
                                         </div>
                                     </div>
                                     <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
@@ -72,7 +129,7 @@ const ResultMuseum = () => {
                                             <label className={style.labells}>
                                                 Gallery
                                             </label>
-                                            <Gallery />
+                                            <Gallery galleryValue={galleryValue} />
                                         </div>
                                     </div>
                                     <div className='mb-md-5 mb-4 col-md-4 col-sm-6'>
@@ -80,7 +137,7 @@ const ResultMuseum = () => {
                                             <label className={style.labells}>
                                                 Theme
                                             </label>
-                                            <Theme />
+                                            <Theme ThemeValue={ThemeValue} />
                                         </div>
                                     </div>
                                     <div className='mb-sm-0 mb-4 col-md-8 col-sm-6'>
@@ -103,8 +160,6 @@ const ResultMuseum = () => {
                         </form>
                     </div>
                 </div>
-
-
             </section>
 
 
@@ -112,28 +167,9 @@ const ResultMuseum = () => {
                 <div className='container'>
                     <p className={`text-start ${style.First_title}`}> Explore the glory of Ancient Egypt through an extensive collection dating from Prehistoric times to the Roman Period, each revealing a unique aspect of the ancient Egyptian civilisation.</p>
                     <div className='row'>
-                        {data && data?.map((Allslides) =>
-                            <div className={`mb-4 col-md-4 ${style.card_style}`}>
-                                <div className={` h-100 ${style.total_card}`}>
-                                    <div className='img-block zoomIn h-100 undefined'>
-                                        <span className={`d-flex h-100 ${style.First_Bottom_Span}`}>
-                                            <img key={Allslides.id} src={Allslides.thumbnail} className={`img-block zoomIn h-100 w-100 undefined`} />
-                                        </span>
-                                    </div>
-                                    <div className={` ${style.text_onCard}`}>
-                                        <div className={`${style.Bottom_text}`}>
-                                            <h6 className={`${style.Style_H6}`}>
-                                                {Allslides?.title}
-                                            </h6>
-                                            <a href={`/search-result/${Allslides.id}`} className={`${style.New_Links}`}>
-                                                See Details
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                        )}
+                        {collectiondata ? collectiondata.data.length > 0 ? collectiondata.data?.map((Allslides) => slide(Allslides)) : "no"
+                            : data && data?.map((Allslides) => slide(Allslides))}
                     </div>
                 </div>
             </section>
