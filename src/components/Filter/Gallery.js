@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import endPoints, { httpData } from '../../store/Alldata';
 import style from './Gallery.module.css'
 
-function Gallery() {
+function Gallery({ galleryValue }) {
 
     const [gallerydata, setGallerydata] = useState([]);
 
@@ -15,7 +15,7 @@ function Gallery() {
     }, []);
     return (
 
-        <select className={style.Div_select}>
+        <select className={style.Div_select} onChange={(event) => galleryValue(event.target.value)}>
             <option selected >Select</option>
             {gallerydata && gallerydata.map((data) =>
 
