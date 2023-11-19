@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import endPoints, { httpData } from '../../store/Alldata';
 import style from './Provenance.module.css'
 
-function Provenance() {
+function Provenance({ provenanceValue }) {
 
     const [provenanceldata, setProvenancedata] = useState([]);
 
@@ -15,7 +15,7 @@ function Provenance() {
     }, []);
     return (
 
-        <select className={style.Div_select}>
+        <select className={style.Div_select} onChange={(event) => provenanceValue(event.target.value)}>
             <option selected >Select</option>
             {provenanceldata && provenanceldata.map((data) =>
 
