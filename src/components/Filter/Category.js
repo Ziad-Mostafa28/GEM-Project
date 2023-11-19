@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import endPoints, { httpData } from '../../store/Alldata';
 import style from './Category.module.css'
-function Category({ categoryValue }) {
+
+
+
+
+const Category = ({ categoryValue }) => {
 
     const [categoryData, setCategoryData] = useState([]);
 
