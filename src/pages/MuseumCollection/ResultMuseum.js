@@ -168,7 +168,7 @@ const ResultMuseum = () => {
                     <p className={`text-start ${style.First_title}`}> Explore the glory of Ancient Egypt through an extensive collection dating from Prehistoric times to the Roman Period, each revealing a unique aspect of the ancient Egyptian civilisation.</p>
                     <div className='row'>
 
-                        {collectiondata ? collectiondata.data.length > 0 ? collectiondata.data?.map((Allslides) => slide(Allslides)) : "no"
+                        {collectiondata ? collectiondata.data.length > 0 ? collectiondata.data?.map((Allslides) => slide(Allslides)) : "There is no result matching your search!"
                             : data && data?.map((Allslides) => slide(Allslides))}
                     </div>
                 </div>
